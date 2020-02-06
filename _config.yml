@@ -20,7 +20,7 @@ logo: "/assets/KigsHD.png"
 description: >- # this means to ignore newlines until "baseurl:"
   a free and open source C++ modular multipurpose cross platform framework.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://Kigs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://Kigs-framework.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  Kigs-framework
 
@@ -29,6 +29,7 @@ markdown: kramdown
 theme: jekyll-theme-dinky
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
