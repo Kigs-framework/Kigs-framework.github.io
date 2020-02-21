@@ -48,3 +48,9 @@ Sample5 is a data driven graphics application giving an overview of the CoreItem
 Sample6 is a console application giving an overview of the Signal / Slot / Notifications features.
 
 [Sample6](/samplesHTML5/sample6/index.html)
+
+### Sample7
+
+Sample7 is a data driven graphics application giving an overview of Lua Binding features.
+
+[Sample6](/samplesHTML5/sample7/index.html)
