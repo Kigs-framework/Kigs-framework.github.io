@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 Title: Kigs framework
 Description: This is the Kigs framework home page, a modular, general purpose, cross platform, C++ development framework.
 Author: Stephane Capo

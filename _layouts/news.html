@@ -44,6 +44,16 @@
       <section>
 		<img src={{ site.logo }}>
         {{ content }}
+  
+	     <ul class="entries">
+		  {% for post in site.posts %}
+		  <li>
+			<a href="{{ post.url }}">
+			<h2 class="blogdate">{{ post.date | date: "%d %B %Y" }} - {{ post.title }} </h2></a>
+			<div>{{ post.content |truncatehtml | truncatewords: 20 }}</div>
+		  </li>
+		  {% endfor %}
+		</ul>
 	  </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> Based on the Dinky theme</small></p>
