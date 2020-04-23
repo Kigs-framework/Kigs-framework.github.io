@@ -11,7 +11,7 @@ Tags: c++,framework,open source,modular,scalable,cross-platforms
 ## Emscripten built sample projects 
 
 Here are online version of the Kigs framework samples, built with Emscripten. 
-To know how to build samples on available platforms, go to the framework Wiki : [Getting Started](https://github.com/assoria/kigs/wiki/Getting-Started).
+To know how to build samples on available platforms, go to the framework Wiki : [Getting Started](https://github.com/Kigs-framework/kigs/wiki/Getting-Started).
 
 ### Sample1 
 

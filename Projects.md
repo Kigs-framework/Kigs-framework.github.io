@@ -22,16 +22,16 @@ Explore and analyse building models on Hololens.<br/>
 <br/>
 ### archaeological dig simulator :
 <br/>
-![archaeological dig simulator](http://assoria.com/assets/img/portfolios/15-Assoria-serious-game-Truelles-&-Pixels---CNRS-4.gif)
+![archaeological dig simulator](/assets/TruellesEtPixels.jpg)
 <br/>
 
 ### Ephebe Museum serious games on Android tablet :
 <br/>
-![Ephebe Museum](http://actualites-pro-museumexperts.com/wp-content/uploads/2015/06/jeu-ephebe_assoria2.png)
+![Ephebe Museum](/assets/Ephebe.png)
 <br/>
 
 ### Simulator for learning to drive inspection robots :
 <br/>
-![Inspection robots simulator](http://assoria.com/assets/img/portfolios/13-Assoria-simulateur-robot-Suez-Sra-savac.jpg)
+![Inspection robots simulator](/assets/RobotSimulator.jpg)
 <br/>
 
