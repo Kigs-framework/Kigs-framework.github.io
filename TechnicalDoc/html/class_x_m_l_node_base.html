@@ -85,6 +85,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="_x_m_l_node_8h.html#a09046a26c20558b95258cbe67a952fe8">XMLNodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a10f70ac4b0a255f1c34fb4737419810c">getType</a> ()</td></tr>
 <tr class="memdesc:a10f70ac4b0a255f1c34fb4737419810c"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node type <br /></td></tr>
 <tr class="separator:a10f70ac4b0a255f1c34fb4737419810c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66333ff042e1bbad0f6136689723ee1e"><td class="memItemLeft" align="right" valign="top"><a id="a66333ff042e1bbad0f6136689723ee1e"></a>
+<a class="el" href="class_x_m_l_node_base.html">XMLNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a66333ff042e1bbad0f6136689723ee1e">getChildElement</a> (unsigned int index=0)</td></tr>
+<tr class="memdesc:a66333ff042e1bbad0f6136689723ee1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return child node by index <br /></td></tr>
+<tr class="separator:a66333ff042e1bbad0f6136689723ee1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3db33aed7348dc4b9b04e661af3551"><td class="memItemLeft" align="right" valign="top"><a id="a8b3db33aed7348dc4b9b04e661af3551"></a>
+<a class="el" href="class_x_m_l_node_base.html">XMLNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a8b3db33aed7348dc4b9b04e661af3551">getChildElement</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a8b3db33aed7348dc4b9b04e661af3551"><td class="mdescLeft">&#160;</td><td class="mdescRight">return child node by name <br /></td></tr>
+<tr class="separator:a8b3db33aed7348dc4b9b04e661af3551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad6d97a86066d2df9f99bb3f0f747f0"><td class="memItemLeft" align="right" valign="top"><a id="a8ad6d97a86066d2df9f99bb3f0f747f0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a8ad6d97a86066d2df9f99bb3f0f747f0">getChildCount</a> ()</td></tr>
+<tr class="memdesc:a8ad6d97a86066d2df9f99bb3f0f747f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node's children count <br /></td></tr>
+<tr class="separator:a8ad6d97a86066d2df9f99bb3f0f747f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6322aab66cab9b14552f569903cd1cbf"><td class="memItemLeft" align="right" valign="top"><a id="a6322aab66cab9b14552f569903cd1cbf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a6322aab66cab9b14552f569903cd1cbf">getAttributeCount</a> ()</td></tr>
+<tr class="memdesc:a6322aab66cab9b14552f569903cd1cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">return attribute count for this node <br /></td></tr>
+<tr class="separator:a6322aab66cab9b14552f569903cd1cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33392c253a617f782be1525f86380c49"><td class="memItemLeft" align="right" valign="top"><a id="a33392c253a617f782be1525f86380c49"></a>
+XMLAttributeBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a33392c253a617f782be1525f86380c49">getAttribute</a> (int index)</td></tr>
+<tr class="memdesc:a33392c253a617f782be1525f86380c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by index <br /></td></tr>
+<tr class="separator:a33392c253a617f782be1525f86380c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d5a2f80cd1779030ddd8e0dee44ea6"><td class="memItemLeft" align="right" valign="top"><a id="a60d5a2f80cd1779030ddd8e0dee44ea6"></a>
+XMLAttributeBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a60d5a2f80cd1779030ddd8e0dee44ea6">getAttribute</a> (const std::string_view &amp;name)</td></tr>
+<tr class="memdesc:a60d5a2f80cd1779030ddd8e0dee44ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by name <br /></td></tr>
+<tr class="separator:a60d5a2f80cd1779030ddd8e0dee44ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87429dfd13ce8558560ec38f10ddd26b"><td class="memItemLeft" align="right" valign="top"><a id="a87429dfd13ce8558560ec38f10ddd26b"></a>
+XMLAttributeBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a87429dfd13ce8558560ec38f10ddd26b">getAndRemoveAttribute</a> (const std::string_view &amp;name)</td></tr>
+<tr class="memdesc:a87429dfd13ce8558560ec38f10ddd26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by name and remove it from list (useful when parsing xml struct and you are sure you will access attribute only once) <br /></td></tr>
+<tr class="separator:a87429dfd13ce8558560ec38f10ddd26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1804f11da85700d2da91dc5196a65229"><td class="memItemLeft" align="right" valign="top"><a id="a1804f11da85700d2da91dc5196a65229"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a1804f11da85700d2da91dc5196a65229">getInt</a> () const =0</td></tr>
+<tr class="memdesc:a1804f11da85700d2da91dc5196a65229"><td class="mdescLeft">&#160;</td><td class="mdescRight">return value as an int <br /></td></tr>
+<tr class="separator:a1804f11da85700d2da91dc5196a65229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b0b41ef382a1a84e3950935068b8de"><td class="memItemLeft" align="right" valign="top"><a id="ab9b0b41ef382a1a84e3950935068b8de"></a>
+virtual kfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#ab9b0b41ef382a1a84e3950935068b8de">getFloat</a> () const =0</td></tr>
+<tr class="memdesc:ab9b0b41ef382a1a84e3950935068b8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">return value as a kfloat <br /></td></tr>
+<tr class="separator:ab9b0b41ef382a1a84e3950935068b8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -92,11 +128,20 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="_x_m_l_node_8h.html#a09046a26c20558b95258cbe67a952fe8">XMLNodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#aa178dcaa06c4dfec77d6301e7555eec6">mType</a></td></tr>
 <tr class="memdesc:aa178dcaa06c4dfec77d6301e7555eec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">node type <br /></td></tr>
 <tr class="separator:aa178dcaa06c4dfec77d6301e7555eec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8a0b36b85611e1de24e5a662975530"><td class="memItemLeft" align="right" valign="top"><a id="a1e8a0b36b85611e1de24e5a662975530"></a>
+kstl::vector&lt; <a class="el" href="class_x_m_l_node_base.html">XMLNodeBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#a1e8a0b36b85611e1de24e5a662975530">mChildren</a></td></tr>
+<tr class="memdesc:a1e8a0b36b85611e1de24e5a662975530"><td class="mdescLeft">&#160;</td><td class="mdescRight">node children <br /></td></tr>
+<tr class="separator:a1e8a0b36b85611e1de24e5a662975530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca51515a6c9e3f9ff9329037dd054cb"><td class="memItemLeft" align="right" valign="top"><a id="aaca51515a6c9e3f9ff9329037dd054cb"></a>
+kstl::vector&lt; XMLAttributeBase * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_base.html#aaca51515a6c9e3f9ff9329037dd054cb">mAttributes</a></td></tr>
+<tr class="memdesc:aaca51515a6c9e3f9ff9329037dd054cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">node attributes <br /></td></tr>
+<tr class="separator:aaca51515a6c9e3f9ff9329037dd054cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for templated XML Node class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>G:/Projects/Github/kigs/framework/XML/Headers/<a class="el" href="_x_m_l_node_8h_source.html">XMLNode.h</a></li>
+<li>G:/Projects/Github/kigs/framework/XML/Sources/XMLNode.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

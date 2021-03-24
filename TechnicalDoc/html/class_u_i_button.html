@@ -80,15 +80,15 @@ Inheritance diagram for UIButton:</div>
  <div class="center">
   <img src="class_u_i_button.png" usemap="#UIButton_map" alt=""/>
   <map id="UIButton_map" name="UIButton_map">
-<area href="class_u_i_textured_item.html" title="Textured UIDrawableItem." alt="UITexturedItem" shape="rect" coords="192,280,374,304"/>
-<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="192,224,374,248"/>
-<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="192,168,374,192"/>
-<area href="class_node2_d.html" title="A Node2D is the base class for all objects to be added to a 2DLayer." alt="Node2D" shape="rect" coords="192,112,374,136"/>
-<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="192,56,374,80"/>
-<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="192,0,374,24"/>
-<area href="class_u_i_animated_button.html" title="Textured button with spritesheets." alt="UIAnimatedButton" shape="rect" coords="0,392,182,416"/>
-<area href="class_u_i_button_image.html" title="Button with three textures ( Up, Down , Over )" alt="UIButtonImage" shape="rect" coords="192,392,374,416"/>
-<area href="class_u_i_button_text.html" title="Three state button with different texts." alt="UIButtonText" shape="rect" coords="384,392,566,416"/>
+<area href="class_u_i_textured_item.html" title="Textured UIDrawableItem." alt="UITexturedItem" shape="rect" coords="96,280,278,304"/>
+<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="96,224,278,248"/>
+<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="96,168,278,192"/>
+<area href="class_node2_d.html" title="A Node2D is the base class for all objects to be added to a 2DLayer." alt="Node2D" shape="rect" coords="96,112,278,136"/>
+<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="96,56,278,80"/>
+<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="96,0,278,24"/>
+<area href="class_u_i_button_image.html" title="Button with three textures ( Up, Down , Over )" alt="UIButtonImage" shape="rect" coords="0,392,182,416"/>
+<area href="class_u_i_button_text.html" title="Three state button with different texts." alt="UIButtonText" shape="rect" coords="192,392,374,416"/>
+<area href="class_u_i_point_interet.html" title="An UIPointInteret is placed on the map to mark an point of interest." alt="UIPointInteret" shape="rect" coords="0,448,182,472"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -243,101 +243,108 @@ template&lt;typename StringType &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple Button class. </p>
 <p>2</p>
-<h2><a class="anchor" id="autotoc_md629"></a>
+<h2><a class="anchor" id="autotoc_md615"></a>
 Attributes</h2>
 <p><a class="anchor" id="UIButton_AutoResize_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md630"></a>
+<h3><a class="anchor" id="autotoc_md616"></a>
 Key : AutoResize</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : true</li>
 </ul>
 <p><a class="anchor" id="UIButton_ClickDownAction_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md631"></a>
+<h3><a class="anchor" id="autotoc_md617"></a>
 Key : ClickDownAction</h3>
 <ul>
 <li>Type : string</li>
 </ul>
 <p><a class="anchor" id="UIButton_ClickUpAction_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md632"></a>
+<h3><a class="anchor" id="autotoc_md618"></a>
 Key : ClickUpAction</h3>
 <ul>
 <li>Type : string</li>
 </ul>
 <p><a class="anchor" id="UIButton_ClickedColor_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md633"></a>
+<h3><a class="anchor" id="autotoc_md619"></a>
 Key : ClickedColor</h3>
 <ul>
 <li>Type : array [ 4 ]</li>
 <li>Default Value : {0.500000,0.500000,0.500000,1.000000}</li>
 </ul>
 <p><a class="anchor" id="UIButton_DefaultPressed_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md634"></a>
+<h3><a class="anchor" id="autotoc_md620"></a>
 Key : DefaultPressed</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="UIButton_HoverColor_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md635"></a>
+<h3><a class="anchor" id="autotoc_md621"></a>
 Key : HoverColor</h3>
 <ul>
 <li>Type : array [ 4 ]</li>
 <li>Default Value : {0.800000,0.800000,0.800000,1.000000}</li>
 </ul>
 <p><a class="anchor" id="UIButton_IdleColor_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md636"></a>
+<h3><a class="anchor" id="autotoc_md622"></a>
 Key : IdleColor</h3>
 <ul>
 <li>Type : array [ 4 ]</li>
 <li>Default Value : {1.000000,1.000000,1.000000,1.000000}</li>
 </ul>
 <p><a class="anchor" id="UIButton_KeepClickOutside_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md637"></a>
+<h3><a class="anchor" id="autotoc_md623"></a>
 Key : KeepClickOutside</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="UIButton_MouseOutAction_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md638"></a>
+<h3><a class="anchor" id="autotoc_md624"></a>
 Key : MouseOutAction</h3>
 <ul>
 <li>Type : string</li>
 </ul>
 <p><a class="anchor" id="UIButton_MouseOverAction_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md639"></a>
+<h3><a class="anchor" id="autotoc_md625"></a>
 Key : MouseOverAction</h3>
 <ul>
 <li>Type : string</li>
 </ul>
 <p><a class="anchor" id="UIButton_Parameter_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md640"></a>
+<h3><a class="anchor" id="autotoc_md626"></a>
 Key : Parameter</h3>
 <ul>
 <li>Type : usstring</li>
 </ul>
 <p><a class="anchor" id="UIButton_StayPressed_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md641"></a>
+<h3><a class="anchor" id="autotoc_md627"></a>
 Key : StayPressed</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
+<p><a class="anchor" id="UIButton_SwallowEvents_attr"></a></p>
+<h3><a class="anchor" id="autotoc_md628"></a>
+Key : SwallowEvents</h3>
+<ul>
+<li>Type : bool</li>
+<li>Default Value : false</li>
+</ul>
 <p><a class="anchor" id="UIButton_UnSelectAction_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md642"></a>
+<h3><a class="anchor" id="autotoc_md629"></a>
 Key : UnSelectAction</h3>
 <ul>
 <li>Type : string</li>
 </ul>
 <p><a class="anchor" id="UIButton_UseHoverColor_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md643"></a>
+<h3><a class="anchor" id="autotoc_md630"></a>
 Key : UseHoverColor</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md644"></a>
+<h2><a class="anchor" id="autotoc_md631"></a>
 Inherited Attributes</h2>
 <div>
 <ul class="multicol">
@@ -366,12 +373,14 @@ Inherited Attributes</h2>
 <li><a href="class_node2_d.html#Node2D_SizeY_attr">(Node2D) SizeY</a></li>
 </ul>
 </div>
-<h2><a class="anchor" id="autotoc_md645"></a>
+<h2><a class="anchor" id="autotoc_md632"></a>
 Inherited Methods</h2>
 <div>
 <ul class="multicol">
-<li><a href=".html#">(UIDrawableItem) ManageClickTouchEvent</a></li>
-<li><a href=".html#">(UIDrawableItem) ManageDirectTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_ManageClickTouchEvent_meth">(UITexturedItem) ManageClickTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_ManageDirectTouchEvent_meth">(UITexturedItem) ManageDirectTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_TextureNotifyUpdate_meth">(UITexturedItem) TextureNotifyUpdate</a></li>
+<li><a href=".html#">(UIDrawableItem) NeedRecomputeLayout</a></li>
 <li><a href="class_u_i_item.html#UIItem_ContainsPoint_meth">(UIItem) ContainsPoint</a></li>
 <li><a href="class_u_i_item.html#UIItem_ManageInputSwallowEvent_meth">(UIItem) ManageInputSwallowEvent</a></li>
 <li><a href="class_node2_d.html#Node2D_GetSize_meth">(Node2D) GetSize</a></li>

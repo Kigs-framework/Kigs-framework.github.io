@@ -80,13 +80,15 @@ Inheritance diagram for UIImage:</div>
  <div class="center">
   <img src="class_u_i_image.png" usemap="#UIImage_map" alt=""/>
   <map id="UIImage_map" name="UIImage_map">
-<area href="class_u_i_textured_item.html" title="Textured UIDrawableItem." alt="UITexturedItem" shape="rect" coords="0,280,182,304"/>
-<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="0,224,182,248"/>
-<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="0,168,182,192"/>
-<area href="class_node2_d.html" title="A Node2D is the base class for all objects to be added to a 2DLayer." alt="Node2D" shape="rect" coords="0,112,182,136"/>
-<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="0,56,182,80"/>
-<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="0,0,182,24"/>
-<area href="class_u_i_image_highlight.html" title="???" alt="UIImageHighlight" shape="rect" coords="0,392,182,416"/>
+<area href="class_u_i_textured_item.html" title="Textured UIDrawableItem." alt="UITexturedItem" shape="rect" coords="192,280,374,304"/>
+<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="192,224,374,248"/>
+<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="192,168,374,192"/>
+<area href="class_node2_d.html" title="A Node2D is the base class for all objects to be added to a 2DLayer." alt="Node2D" shape="rect" coords="192,112,374,136"/>
+<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="192,56,374,80"/>
+<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="192,0,374,24"/>
+<area href="class_point_interet_vignette.html" title="An PointInteretVignette is a pop-up created from a model, who give a description of a point of intere..." alt="PointInteretVignette" shape="rect" coords="0,392,182,416"/>
+<area href="class_u_i_image_highlight.html" title="???" alt="UIImageHighlight" shape="rect" coords="192,392,374,416"/>
+<area href="class_u_i_map.html" title="An UIMap is a class for add a map." alt="UIMap" shape="rect" coords="384,392,566,416"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -242,29 +244,7 @@ template&lt;typename StringType &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Just display an image ( texture ) with different modes. </p>
 <p>2</p>
-<h2><a class="anchor" id="autotoc_md729"></a>
-Attributes</h2>
-<p><a class="anchor" id="UIImage_DisplayMode_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md730"></a>
-Key : DisplayMode</h3>
-<ul>
-<li>Type : enum { "Auto" , "Resize" , "Scale" , "Shrink" , "Repeat" }</li>
-<li>Default Value : Auto</li>
-</ul>
-<p><a class="anchor" id="UIImage_KeepRatio_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md731"></a>
-Key : KeepRatio</h3>
-<ul>
-<li>Type : bool</li>
-<li>Default Value : true</li>
-</ul>
-<p><a class="anchor" id="UIImage_Texture_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md732"></a>
-Key : Texture</h3>
-<ul>
-<li>Type : string</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md733"></a>
+<h2><a class="anchor" id="autotoc_md716"></a>
 Inherited Attributes</h2>
 <div>
 <ul class="multicol">
@@ -293,12 +273,14 @@ Inherited Attributes</h2>
 <li><a href="class_node2_d.html#Node2D_SizeY_attr">(Node2D) SizeY</a></li>
 </ul>
 </div>
-<h2><a class="anchor" id="autotoc_md734"></a>
+<h2><a class="anchor" id="autotoc_md717"></a>
 Inherited Methods</h2>
 <div>
 <ul class="multicol">
-<li><a href=".html#">(UIDrawableItem) ManageClickTouchEvent</a></li>
-<li><a href=".html#">(UIDrawableItem) ManageDirectTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_ManageClickTouchEvent_meth">(UITexturedItem) ManageClickTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_ManageDirectTouchEvent_meth">(UITexturedItem) ManageDirectTouchEvent</a></li>
+<li><a href="class_u_i_textured_item.html#UITexturedItem_TextureNotifyUpdate_meth">(UITexturedItem) TextureNotifyUpdate</a></li>
+<li><a href=".html#">(UIDrawableItem) NeedRecomputeLayout</a></li>
 <li><a href="class_u_i_item.html#UIItem_ContainsPoint_meth">(UIItem) ContainsPoint</a></li>
 <li><a href="class_u_i_item.html#UIItem_ManageInputSwallowEvent_meth">(UIItem) ManageInputSwallowEvent</a></li>
 <li><a href="class_node2_d.html#Node2D_GetSize_meth">(Node2D) GetSize</a></li>

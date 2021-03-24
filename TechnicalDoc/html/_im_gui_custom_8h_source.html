@@ -82,10 +82,23 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">bool</span> TextureButton(<span class="keyword">const</span> std::string&amp; texture_name, ImVec2 size = ImVec2(0, 0), <span class="keyword">const</span> ImVec2&amp; uv0 = ImVec2(0, 0), <span class="keyword">const</span> ImVec2&amp; uv1 = ImVec2(1, 1), <span class="keywordtype">int</span> frame_padding = -1, <span class="keyword">const</span> ImVec4&amp; bg_col = ImVec4(0, 0, 0, 0), <span class="keyword">const</span> ImVec4&amp; tint_col = ImVec4(1, 1, 1, 1));</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_texture.html">Texture</a>(<span class="keyword">const</span> std::string&amp; texture_name, ImVec2 size = ImVec2(0, 0), <span class="keyword">const</span> ImVec2&amp; uv0 = ImVec2(0, 0), <span class="keyword">const</span> ImVec2&amp; uv1 = ImVec2(1, 1), <span class="keyword">const</span> ImVec4&amp; tint_col = ImVec4(1, 1, 1, 1), <span class="keyword">const</span> ImVec4&amp; border_col = ImVec4(0, 0, 0, 0));</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> CenterWidget(<span class="keywordtype">float</span> widget_width);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> CenterText(<span class="keyword">const</span> std::string&amp; txt);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> CenterText(<span class="keyword">const</span> std::string&amp; txt, <span class="keywordtype">bool</span> wrapped=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Align the next widget from the right of the window, with enough space for &quot;nb_of_elements&quot; (to account for spacing between elements) totaling &quot;sum_of_elements_width&quot; of size</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Returns the width available between current cursor pos and the right aligned element</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">float</span> SameLineAlignRight(<span class="keywordtype">float</span> sum_of_elements_width, u32 nb_of_elements = 1);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">float</span> GetRemainingWidth(<span class="keywordtype">float</span> sum_of_elements_width, u32 nb_of_elements = 1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// Get the size one element should have to fit &quot;count&quot; of them in a single line perfectly</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">float</span> GetElementWidthForSubdivision(<span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> Label(<span class="keyword">const</span> std::string&amp; txt);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> ButtonLabel(<span class="keyword">const</span> std::string&amp; txt, v2f size = v2f(0, 0));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> ButtonWithLabel(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> std::string txt, <span class="keywordtype">float</span> label_width = 0.0f, v2f size = v2f(0, 0));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">manage a texture.</div><div class="ttdef"><b>Definition:</b> Texture.h:28</div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">manage a texture.</div><div class="ttdef"><b>Definition:</b> Texture.h:46</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -136,36 +136,44 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    HGLRC mHRC = NULL;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    HWND  mHWnd = NULL;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifdef WUP</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    winrt::com_ptr&lt;ID3D11Texture2D&gt;         mRenderTargetBuffer;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    winrt::com_ptr&lt;ID3D11RenderTargetView&gt;  mRenderTargetView;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    winrt::com_ptr&lt;ID3D11Texture2D&gt;         mDepthStencilBuffer;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    winrt::com_ptr&lt;ID3D11DepthStencilView&gt;  mDepthStencilView;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt;         mRenderTargetBuffer;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11RenderTargetView&gt;  mRenderTargetView;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt;         mDepthStencilBuffer;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11DepthStencilView&gt;  mDepthStencilView;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mCurrentFrameNumber = -1;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#ifdef WUP</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters mRenderingParameters = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classma_numeric_heritage.html">maInt</a> mDepthBufferCount = BASE_ATTRIBUTE(DepthBufferCount, 1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classma_numeric_heritage.html">maInt</a> mActiveDepthBuffer = BASE_ATTRIBUTE(ActiveDepthBuffer, 0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#ifdef WUP</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classma_numeric_heritage.html">maInt</a> mHoloCommittedDepthBuffer = BASE_ATTRIBUTE(HoloCommittedDepthBuffer, 0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    winrt::com_ptr&lt;ID3D11Texture2D&gt;         mRenderTargetBuffer;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    winrt::com_ptr&lt;ID3D11RenderTargetView&gt;  mRenderTargetView;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::vector&lt;winrt::com_ptr&lt;ID3D11Texture2D&gt;&gt;            mDepthStencilBuffers;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt;winrt::com_ptr&lt;ID3D11DepthStencilView&gt;&gt;     mDepthStencilViews;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt;         mRenderTargetBuffer;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11RenderTargetView&gt;  mRenderTargetView;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt;&gt;        mDepthStencilBuffers;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;Microsoft::WRL::ComPtr&lt;ID3D11DepthStencilView&gt;&gt; mDepthStencilViews;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mCurrentFrameNumber = -1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#ifdef WUP</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters mRenderingParameters = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_a95089b7d1f025bdfed23e0d0911d2d73"><div class="ttname"><a href="class_d_x11_rendering_screen.html#a95089b7d1f025bdfed23e0d0911d2d73">DX11RenderingScreen::SetWindowByHandle</a></div><div class="ttdeci">virtual void SetWindowByHandle(void *PtrToHandle) override</div><div class="ttdoc">Set the target window handle of the rendering. If null, the Window name passed through &quot;ParentWindowN...</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.h:44</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html"><div class="ttname"><a href="class_d_x11_rendering_screen.html">DX11RenderingScreen</a></div><div class="ttdoc">DX11 implementation of RenderingScreen.</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.h:26</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_a3f79233c686235f28da0899075ec46b3"><div class="ttname"><a href="class_d_x11_rendering_screen.html#a3f79233c686235f28da0899075ec46b3">DX11RenderingScreen::InitModifiable</a></div><div class="ttdeci">void InitModifiable() override</div><div class="ttdoc">default modifiable init : set all initparams to readonly and set initflag to true</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.cpp:258</div></div>
 <div class="ttc" id="aclass_rendering_screen_html"><div class="ttname"><a href="class_rendering_screen.html">RenderingScreen</a></div><div class="ttdoc">Generic &quot;draw surface&quot;.</div><div class="ttdef"><b>Definition:</b> RenderingScreen.h:28</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_ab07638daafcbb844ab964defcf8f642f"><div class="ttname"><a href="class_d_x11_rendering_screen.html#ab07638daafcbb844ab964defcf8f642f">DX11RenderingScreen::Release</a></div><div class="ttdeci">void Release(TravState *state) override</div><div class="ttdoc">release the screen</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.cpp:130</div></div>
+<div class="ttc" id="aclassma_numeric_heritage_html"><div class="ttname"><a href="classma_numeric_heritage.html">maNumericHeritage</a></div><div class="ttdoc">CoreModifiableAttributeData for numeric without different level of notification.</div><div class="ttdef"><b>Definition:</b> maNumeric.h:17</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_a81fcc49b182b20564ec18fac2634dae3"><div class="ttname"><a href="class_d_x11_rendering_screen.html#a81fcc49b182b20564ec18fac2634dae3">DX11RenderingScreen::UninitModifiable</a></div><div class="ttdeci">void UninitModifiable() override</div><div class="ttdoc">called when InitModifiable has failled : reset read/write flag on all init params</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.cpp:247</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_a5f28ff7fd5bf5dcbade085c131259e99"><div class="ttname"><a href="class_d_x11_rendering_screen.html#a5f28ff7fd5bf5dcbade085c131259e99">DX11RenderingScreen::SetActive</a></div><div class="ttdeci">bool SetActive(TravState *state) override</div><div class="ttdoc">active the screen</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.cpp:96</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_aabe89a9dbf645afd6e08d080ab5a06df"><div class="ttname"><a href="class_d_x11_rendering_screen.html#aabe89a9dbf645afd6e08d080ab5a06df">DX11RenderingScreen::GetContextHandle</a></div><div class="ttdeci">virtual void * GetContextHandle() override</div><div class="ttdoc">get the target window handle of the rendering.</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.h:45</div></div>
 <div class="ttc" id="aclass_d_x11_rendering_screen_html_a0f092c28fb2cbdf2e6637f7d858077a5"><div class="ttname"><a href="class_d_x11_rendering_screen.html#a0f092c28fb2cbdf2e6637f7d858077a5">DX11RenderingScreen::Resize</a></div><div class="ttdeci">void Resize(kfloat sizeX, kfloat sizeY) override</div><div class="ttdoc">resize the screen</div><div class="ttdef"><b>Definition:</b> DX11RenderingScreen.cpp:77</div></div>
 <div class="ttc" id="a_rendering_screen_8h_html"><div class="ttname"><a href="_rendering_screen_8h.html">RenderingScreen.h</a></div></div>
-<div class="ttc" id="aclass_trav_state_html"><div class="ttname"><a href="class_trav_state.html">TravState</a></div><div class="ttdoc">Base class used to store current scene traversal state.</div><div class="ttdef"><b>Definition:</b> TravState.h:71</div></div>
-<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:27</div></div>
+<div class="ttc" id="aclass_trav_state_html"><div class="ttname"><a href="class_trav_state.html">TravState</a></div><div class="ttdoc">Base class used to store current scene traversal state.</div><div class="ttdef"><b>Definition:</b> TravState.h:72</div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:28</div></div>
 <div class="ttc" id="aclass_rendering_screen_html_abcb6cf26aa69e4b77fd6ef81e0d56a5f"><div class="ttname"><a href="class_rendering_screen.html#abcb6cf26aa69e4b77fd6ef81e0d56a5f">RenderingScreen::mIsOffScreen</a></div><div class="ttdeci">maBool mIsOffScreen</div><div class="ttdoc">?</div><div class="ttdef"><b>Definition:</b> RenderingScreen.h:184</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

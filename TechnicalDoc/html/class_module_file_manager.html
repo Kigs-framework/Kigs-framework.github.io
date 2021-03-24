@@ -100,14 +100,20 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:abdc602f73674a0d48edf4589ece76345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec13032dd61d391296964b3cb806e4b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_file_manager.html#a9ec13032dd61d391296964b3cb806e4b">SaveFile</a> (const char *filename, u8 *data, u64 length)</td></tr>
 <tr class="separator:a9ec13032dd61d391296964b3cb806e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0a2cf1c09f4c5e593aa94ccaa44232"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_file_manager.html#a8b0a2cf1c09f4c5e593aa94ccaa44232">RemoveFile</a> (const char *filename)</td></tr>
+<tr class="separator:a8b0a2cf1c09f4c5e593aa94ccaa44232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d7d2adcfe2ef1226019a7b7d1f768a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_file_manager.html#ac1d7d2adcfe2ef1226019a7b7d1f768a">CoreCopyFile</a> (const char *sourceFilename, const char *destFileName, int buffLen=2048)</td></tr>
 <tr class="separator:ac1d7d2adcfe2ef1226019a7b7d1f768a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5a2bee359747a345f42f1c4c9750e5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_file_manager.html#a2a5a2bee359747a345f42f1c4c9750e5">CoreCopyFile</a> (SP&lt; FileHandle &gt; source, SP&lt; FileHandle &gt; dest, int buffLen=2048)</td></tr>
+<tr class="separator:a2a5a2bee359747a345f42f1c4c9750e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a75c166d379a53e5d1803e61a9d778"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_file_manager.html#a54a75c166d379a53e5d1803e61a9d778">CoreCopyPartOfFile</a> (SP&lt; FileHandle &gt; lsource, u64 lstart, u64 lsize, SP&lt; FileHandle &gt; ldest, int lbuffLen=2048)</td></tr>
+<tr class="separator:a54a75c166d379a53e5d1803e61a9d778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage classes related to pathes and file reading / writing. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac1d7d2adcfe2ef1226019a7b7d1f768a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1d7d2adcfe2ef1226019a7b7d1f768a">&#9670;&nbsp;</a></span>CoreCopyFile()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d7d2adcfe2ef1226019a7b7d1f768a">&#9670;&nbsp;</a></span>CoreCopyFile() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,6 +155,118 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sourceFilename</td><td>name of the file to copy </td></tr>
     <tr><td class="paramname">destFileName</td><td>name of the file to create or overwrite </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if file was copied </dd></dl>
+
+</div>
+</div>
+<a id="a2a5a2bee359747a345f42f1c4c9750e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5a2bee359747a345f42f1c4c9750e5">&#9670;&nbsp;</a></span>CoreCopyFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModuleFileManager::CoreCopyFile </td>
+          <td>(</td>
+          <td class="paramtype">SP&lt; FileHandle &gt;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SP&lt; FileHandle &gt;&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffLen</em> = <code>2048</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>copy a binary file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>handle of source file </td></tr>
+    <tr><td class="paramname">dest</td><td>handle of dest file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if file was copied </dd></dl>
+
+</div>
+</div>
+<a id="a54a75c166d379a53e5d1803e61a9d778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a75c166d379a53e5d1803e61a9d778">&#9670;&nbsp;</a></span>CoreCopyPartOfFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModuleFileManager::CoreCopyPartOfFile </td>
+          <td>(</td>
+          <td class="paramtype">SP&lt; FileHandle &gt;&#160;</td>
+          <td class="paramname"><em>lsource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>lstart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>lsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SP&lt; FileHandle &gt;&#160;</td>
+          <td class="paramname"><em>ldest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lbuffLen</em> = <code>2048</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>copy a part of a file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>handle of source file </td></tr>
+    <tr><td class="paramname">dest</td><td>handle of dest file </td></tr>
   </table>
   </dd>
 </dl>
@@ -310,6 +428,39 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer on the loaded file in memory </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>returned pointer must be deleted with delete[] after use </dd></dl>
+
+</div>
+</div>
+<a id="a8b0a2cf1c09f4c5e593aa94ccaa44232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0a2cf1c09f4c5e593aa94ccaa44232">&#9670;&nbsp;</a></span>RemoveFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModuleFileManager::RemoveFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>remove given file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of the file to delete (remove) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the file was successfully removed </dd></dl>
 
 </div>
 </div>

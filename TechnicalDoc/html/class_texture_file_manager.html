@@ -94,9 +94,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa264fd25480ea16f002d96d7642dd077"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#aa264fd25480ea16f002d96d7642dd077">HasTexture</a> (const kstl::string &amp;fileName)</td></tr>
 <tr class="memdesc:aa264fd25480ea16f002d96d7642dd077"><td class="mdescLeft">&#160;</td><td class="mdescRight">return TRUE if a texture with the name 'fileName' exist  <a href="class_texture_file_manager.html#aa264fd25480ea16f002d96d7642dd077">More...</a><br /></td></tr>
 <tr class="separator:aa264fd25480ea16f002d96d7642dd077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a714472b6e34b73c11e1361fd7425af7f"><td class="memItemLeft" align="right" valign="top">SP&lt; <a class="el" href="class_sprite_sheet_texture.html">SpriteSheetTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#a714472b6e34b73c11e1361fd7425af7f">GetSpriteSheetTexture</a> (const kstl::string &amp;fileName)</td></tr>
-<tr class="memdesc:a714472b6e34b73c11e1361fd7425af7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a spritesheey  <a href="class_texture_file_manager.html#a714472b6e34b73c11e1361fd7425af7f">More...</a><br /></td></tr>
-<tr class="separator:a714472b6e34b73c11e1361fd7425af7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c71dcacc7cadf2d7630c4fa2fb882d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">UnloadTexture</a> (<a class="el" href="class_texture.html">Texture</a> *<a class="el" href="class_texture.html">Texture</a>)</td></tr>
 <tr class="memdesc:a1c71dcacc7cadf2d7630c4fa2fb882d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">unload a texture  <a href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">More...</a><br /></td></tr>
 <tr class="separator:a1c71dcacc7cadf2d7630c4fa2fb882d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,10 +189,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a82ef725d8b486eb1fffc30e6fe780996"><td class="memItemLeft" align="right" valign="top"><a id="a82ef725d8b486eb1fffc30e6fe780996"></a>
-kstl::map&lt; kstl::string, <a class="el" href="class_core_modifiable.html">CoreModifiable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#a82ef725d8b486eb1fffc30e6fe780996">mTextureMap</a></td></tr>
-<tr class="memdesc:a82ef725d8b486eb1fffc30e6fe780996"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each extension, a path list. <br /></td></tr>
-<tr class="separator:a82ef725d8b486eb1fffc30e6fe780996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3869f846bf74ad1b5460fd392573107c"><td class="memItemLeft" align="right" valign="top"><a id="a3869f846bf74ad1b5460fd392573107c"></a>
+kstl::map&lt; std::string, <a class="el" href="class_core_modifiable.html">CoreModifiable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#a3869f846bf74ad1b5460fd392573107c">mTextureMap</a></td></tr>
+<tr class="memdesc:a3869f846bf74ad1b5460fd392573107c"><td class="mdescLeft">&#160;</td><td class="mdescRight">associate a texture to its name <br /></td></tr>
+<tr class="separator:a3869f846bf74ad1b5460fd392573107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcfcd0e8cd136dde86a59d70aaa8d4f"><td class="memItemLeft" align="right" valign="top"><a id="a3bcfcd0e8cd136dde86a59d70aaa8d4f"></a>
+kstl::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">mSpritesheetMap</a></td></tr>
+<tr class="memdesc:a3bcfcd0e8cd136dde86a59d70aaa8d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">associate a spritesheet json file to its texture name <br /></td></tr>
+<tr class="separator:a3bcfcd0e8cd136dde86a59d70aaa8d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -278,33 +279,6 @@ template&lt;typename StringType &gt; </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a714472b6e34b73c11e1361fd7425af7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a714472b6e34b73c11e1361fd7425af7f">&#9670;&nbsp;</a></span>GetSpriteSheetTexture()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SP&lt; <a class="el" href="class_sprite_sheet_texture.html">SpriteSheetTexture</a> &gt; TextureFileManager::GetSpriteSheetTexture </td>
-          <td>(</td>
-          <td class="paramtype">const kstl::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>get a spritesheey </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fileName</td><td>: filemane of the asked SpriteSheet <a class="el" href="class_texture.html" title="manage a texture.">Texture</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the asked <a class="el" href="class_sprite_sheet_texture.html" title="Manage a texture with animation data ( sprites coords...) .">SpriteSheetTexture</a> if found </dd></dl>
-
-</div>
-</div>
 <a id="aa264fd25480ea16f002d96d7642dd077"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa264fd25480ea16f002d96d7642dd077">&#9670;&nbsp;</a></span>HasTexture()</h2>
 

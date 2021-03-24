@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _TEXTUREFILEMANAGER_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_core_modifiable_8h.html">CoreModifiable.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sprite_sheet_texture_8h.html">SpriteSheetTexture.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// ****************************************</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// * TextureFileManager class</span></div>
@@ -96,44 +96,50 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    SP&lt;Texture&gt; GetTexture(<span class="keyword">const</span> kstl::string&amp; fileName, <span class="keyword">const</span> kstl::string&amp; a_textureName, <span class="keywordtype">bool</span> doInit=<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    SP&lt;SpriteSheetTexture&gt; <a class="code" href="class_texture_file_manager.html#a714472b6e34b73c11e1361fd7425af7f">GetSpriteSheetTexture</a>(<span class="keyword">const</span> kstl::string&amp; fileName);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> AddTexture(<span class="keyword">const</span> kstl::string&amp; fileName, <a class="code" href="class_core_modifiable.html">CoreModifiable</a>* Tex);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> AddTexture(<span class="keyword">const</span> kstl::string&amp; fileName, CMSP&amp; Tex);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">UnloadTexture</a>(<a class="code" href="class_texture.html">Texture</a>* <a class="code" href="class_texture.html">Texture</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">UnloadTexture</a>(<a class="code" href="class_sprite_sheet_texture.html">SpriteSheetTexture</a>* Tex);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> UnloadAllTexture();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> ResetAllTexture();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> ClearCache();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    CMSP CreateTexture(<span class="keyword">const</span> kstl::string&amp; textureName);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    CMSP CreateSpriteSheetTexture(<span class="keyword">const</span> kstl::string&amp; textureName);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    KIGS_TOOLS_ONLY(<span class="keyword">auto</span>&amp; GetTextureMap() <span class="keyword">const</span> { <span class="keywordflow">return</span> <a class="code" href="class_texture_file_manager.html#a82ef725d8b486eb1fffc30e6fe780996">mTextureMap</a>; })</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> AddTexture(<span class="keyword">const</span> kstl::string&amp; fileName, <a class="code" href="class_core_modifiable.html">CoreModifiable</a>* Tex);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> AddTexture(<span class="keyword">const</span> kstl::string&amp; fileName, CMSP&amp; Tex);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">UnloadTexture</a>(<a class="code" href="class_texture.html">Texture</a>* <a class="code" href="class_texture.html">Texture</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> UnloadAllTexture();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> ResetAllTexture();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> ClearCache();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    CMSP CreateTexture(<span class="keyword">const</span> kstl::string&amp; textureName);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    KIGS_TOOLS_ONLY(<span class="keyword">auto</span>&amp; GetTextureMap() <span class="keyword">const</span> { <span class="keywordflow">return</span> <a class="code" href="class_texture_file_manager.html#a3869f846bf74ad1b5460fd392573107c">mTextureMap</a>; })</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string GetTextureFromSpriteSheetJSON(<span class="keyword">const</span> std::string&amp; json)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; found = <a class="code" href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">mSpritesheetMap</a>.find(json);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (found != <a class="code" href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">mSpritesheetMap</a>.end())</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> (*found).second;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_texture_file_manager.html#ab211f67d19e8659c89c19fa20d1577bf">TextureFileManager</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_texture_file_manager.html#a82ef725d8b486eb1fffc30e6fe780996">   99</a></span>&#160;    kstl::map&lt;kstl::string, CoreModifiable*&gt; <a class="code" href="class_texture_file_manager.html#a82ef725d8b486eb1fffc30e6fe780996">mTextureMap</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif //_TEXTUREFILEMANAGER_H_</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_texture_file_manager.html#aca5a941194070933be4f867041930c9c">~TextureFileManager</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_texture_file_manager.html#a3869f846bf74ad1b5460fd392573107c">   98</a></span>&#160;    kstl::map&lt;std::string, CoreModifiable*&gt; <a class="code" href="class_texture_file_manager.html#a3869f846bf74ad1b5460fd392573107c">mTextureMap</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">  100</a></span>&#160;    kstl::map&lt;std::string, std::string&gt;     <a class="code" href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">mSpritesheetMap</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif //_TEXTUREFILEMANAGER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_texture_file_manager_html_a1c71dcacc7cadf2d7630c4fa2fb882d1"><div class="ttname"><a href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">TextureFileManager::UnloadTexture</a></div><div class="ttdeci">void UnloadTexture(Texture *Texture)</div><div class="ttdoc">unload a texture</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:155</div></div>
-<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">manage a texture.</div><div class="ttdef"><b>Definition:</b> Texture.h:28</div></div>
-<div class="ttc" id="aclass_texture_file_manager_html_a714472b6e34b73c11e1361fd7425af7f"><div class="ttname"><a href="class_texture_file_manager.html#a714472b6e34b73c11e1361fd7425af7f">TextureFileManager::GetSpriteSheetTexture</a></div><div class="ttdeci">SP&lt; SpriteSheetTexture &gt; GetSpriteSheetTexture(const kstl::string &amp;fileName)</div><div class="ttdoc">get a spritesheey</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:114</div></div>
-<div class="ttc" id="aclass_texture_file_manager_html_ab211f67d19e8659c89c19fa20d1577bf"><div class="ttname"><a href="class_texture_file_manager.html#ab211f67d19e8659c89c19fa20d1577bf">TextureFileManager::TextureFileManager</a></div><div class="ttdeci">TextureFileManager(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:13</div></div>
-<div class="ttc" id="aclass_sprite_sheet_texture_html"><div class="ttname"><a href="class_sprite_sheet_texture.html">SpriteSheetTexture</a></div><div class="ttdoc">Manage a texture with animation data ( sprites coords...) .</div><div class="ttdef"><b>Definition:</b> SpriteSheetTexture.h:38</div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_a1c71dcacc7cadf2d7630c4fa2fb882d1"><div class="ttname"><a href="class_texture_file_manager.html#a1c71dcacc7cadf2d7630c4fa2fb882d1">TextureFileManager::UnloadTexture</a></div><div class="ttdeci">void UnloadTexture(Texture *Texture)</div><div class="ttdoc">unload a texture</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:124</div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">manage a texture.</div><div class="ttdef"><b>Definition:</b> Texture.h:46</div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_ab211f67d19e8659c89c19fa20d1577bf"><div class="ttname"><a href="class_texture_file_manager.html#ab211f67d19e8659c89c19fa20d1577bf">TextureFileManager::TextureFileManager</a></div><div class="ttdeci">TextureFileManager(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:12</div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_a3869f846bf74ad1b5460fd392573107c"><div class="ttname"><a href="class_texture_file_manager.html#a3869f846bf74ad1b5460fd392573107c">TextureFileManager::mTextureMap</a></div><div class="ttdeci">kstl::map&lt; std::string, CoreModifiable * &gt; mTextureMap</div><div class="ttdoc">associate a texture to its name</div><div class="ttdef"><b>Definition:</b> TextureFileManager.h:98</div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_aca5a941194070933be4f867041930c9c"><div class="ttname"><a href="class_texture_file_manager.html#aca5a941194070933be4f867041930c9c">TextureFileManager::~TextureFileManager</a></div><div class="ttdeci">virtual ~TextureFileManager()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:15</div></div>
 <div class="ttc" id="aclass_texture_file_manager_html"><div class="ttname"><a href="class_texture_file_manager.html">TextureFileManager</a></div><div class="ttdoc">Manage texture to avoid redundant instances.</div><div class="ttdef"><b>Definition:</b> TextureFileManager.h:18</div></div>
-<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:400</div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_a3bcfcd0e8cd136dde86a59d70aaa8d4f"><div class="ttname"><a href="class_texture_file_manager.html#a3bcfcd0e8cd136dde86a59d70aaa8d4f">TextureFileManager::mSpritesheetMap</a></div><div class="ttdeci">kstl::map&lt; std::string, std::string &gt; mSpritesheetMap</div><div class="ttdoc">associate a spritesheet json file to its texture name</div><div class="ttdef"><b>Definition:</b> TextureFileManager.h:100</div></div>
+<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:480</div></div>
 <div class="ttc" id="a_core_modifiable_8h_html"><div class="ttname"><a href="_core_modifiable_8h.html">CoreModifiable.h</a></div></div>
-<div class="ttc" id="aclass_texture_file_manager_html_a82ef725d8b486eb1fffc30e6fe780996"><div class="ttname"><a href="class_texture_file_manager.html#a82ef725d8b486eb1fffc30e6fe780996">TextureFileManager::mTextureMap</a></div><div class="ttdeci">kstl::map&lt; kstl::string, CoreModifiable * &gt; mTextureMap</div><div class="ttdoc">For each extension, a path list.</div><div class="ttdef"><b>Definition:</b> TextureFileManager.h:99</div></div>
-<div class="ttc" id="a_sprite_sheet_texture_8h_html"><div class="ttname"><a href="_sprite_sheet_texture_8h.html">SpriteSheetTexture.h</a></div></div>
-<div class="ttc" id="aclass_texture_file_manager_html_aa264fd25480ea16f002d96d7642dd077"><div class="ttname"><a href="class_texture_file_manager.html#aa264fd25480ea16f002d96d7642dd077">TextureFileManager::HasTexture</a></div><div class="ttdeci">bool HasTexture(const kstl::string &amp;fileName)</div><div class="ttdoc">return TRUE if a texture with the name 'fileName' exist</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:21</div></div>
+<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="_texture_8h.html">Texture.h</a></div></div>
+<div class="ttc" id="aclass_texture_file_manager_html_aa264fd25480ea16f002d96d7642dd077"><div class="ttname"><a href="class_texture_file_manager.html#aa264fd25480ea16f002d96d7642dd077">TextureFileManager::HasTexture</a></div><div class="ttdeci">bool HasTexture(const kstl::string &amp;fileName)</div><div class="ttdoc">return TRUE if a texture with the name 'fileName' exist</div><div class="ttdef"><b>Definition:</b> TextureFileManager.cpp:20</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

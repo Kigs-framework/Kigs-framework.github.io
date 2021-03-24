@@ -81,18 +81,19 @@ Inheritance diagram for Node2D:</div>
  <div class="center">
   <img src="class_node2_d.png" usemap="#Node2D_map" alt=""/>
   <map id="Node2D_map" name="Node2D_map">
-<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="0,56,182,80"/>
-<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="0,0,182,24"/>
-<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="0,168,182,192"/>
-<area href="class_passive_colored_mask.html" title="Obsolete ?" alt="PassiveColoredMask" shape="rect" coords="192,224,374,248"/>
-<area href="class_u_i3_d_linked_item.html" title="adjust position of the UIItem to match a 3D position in a Scene3D" alt="UI3DLinkedItem" shape="rect" coords="192,280,374,304"/>
-<area href="class_u_i_control_box_for_scroll_view_u_i.html" title="???" alt="UIControlBoxForScrollViewUI" shape="rect" coords="192,336,374,360"/>
-<area href="class_u_i_cursor.html" title="???" alt="UICursor" shape="rect" coords="192,392,374,416"/>
-<area href="class_u_i_custom_draw.html" title="Draw non UI objects." alt="UICustomDraw" shape="rect" coords="192,448,374,472"/>
-<area href="class_u_i_custom_input_item.html" title="???" alt="UICustomInputItem" shape="rect" coords="192,504,374,528"/>
-<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="192,560,374,584"/>
-<area href="class_u_i_group_button.html" title="Manage buttons in a group." alt="UIGroupButton" shape="rect" coords="192,616,374,640"/>
-<area href="class_u_i_video.html" title="Display a video." alt="UIVideo" shape="rect" coords="192,672,374,696"/>
+<area href="class_core_modifiable.html" title="Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re..." alt="CoreModifiable" shape="rect" coords="96,56,278,80"/>
+<area href="class_generic_ref_counted_base_class.html" title="Base class for refcounting classes, no other dependencies." alt="GenericRefCountedBaseClass" shape="rect" coords="96,0,278,24"/>
+<area href="class_box2_d_body.html" title="Wrap a box2D body (&lt;=&gt; rigid body)." alt="Box2DBody" shape="rect" coords="0,168,182,192"/>
+<area href="class_u_i_item.html" title="Parent class for all UI types ( buttons, texts...)" alt="UIItem" shape="rect" coords="192,168,374,192"/>
+<area href="class_passive_colored_mask.html" title="Obsolete ?" alt="PassiveColoredMask" shape="rect" coords="384,224,566,248"/>
+<area href="class_u_i3_d_linked_item.html" title="adjust position of the UIItem to match a 3D position in a Scene3D" alt="UI3DLinkedItem" shape="rect" coords="384,280,566,304"/>
+<area href="class_u_i_control_box_for_scroll_view_u_i.html" title="???" alt="UIControlBoxForScrollViewUI" shape="rect" coords="384,336,566,360"/>
+<area href="class_u_i_cursor.html" title="???" alt="UICursor" shape="rect" coords="384,392,566,416"/>
+<area href="class_u_i_custom_draw.html" title="Draw non UI objects." alt="UICustomDraw" shape="rect" coords="384,448,566,472"/>
+<area href="class_u_i_custom_input_item.html" title="???" alt="UICustomInputItem" shape="rect" coords="384,504,566,528"/>
+<area href="class_u_i_drawable_item.html" title="UIItem to be drawn." alt="UIDrawableItem" shape="rect" coords="384,560,566,584"/>
+<area href="class_u_i_group_button.html" title="Manage buttons in a group." alt="UIGroupButton" shape="rect" coords="384,616,566,640"/>
+<area href="class_u_i_video.html" title="Display a video." alt="UIVideo" shape="rect" coords="384,672,566,696"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -201,9 +202,6 @@ Friends</h2></td></tr>
 <tr class="memitem:a55ff216dc22b0488890e69510282bdd9"><td class="memItemLeft" align="right" valign="top"><a id="a55ff216dc22b0488890e69510282bdd9"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>ModuleSceneGraph</b></td></tr>
 <tr class="separator:a55ff216dc22b0488890e69510282bdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e0f10ea280650784c5ed4943426658"><td class="memItemLeft" align="right" valign="top"><a id="aa0e0f10ea280650784c5ed4943426658"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>UIBoxLayout</b></td></tr>
-<tr class="separator:aa0e0f10ea280650784c5ed4943426658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -248,116 +246,116 @@ template&lt;typename StringType &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="class_node2_d.html" title="A Node2D is the base class for all objects to be added to a 2DLayer.">Node2D</a> is the base class for all objects to be added to a 2DLayer. </p>
 <p>2 A matrix is associated with each node to give the transformation applied to the node when drawing.</p>
-<h2><a class="anchor" id="autotoc_md417"></a>
+<h2><a class="anchor" id="autotoc_md420"></a>
 Attributes</h2>
 <p><a class="anchor" id="Node2D_Anchor_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md418"></a>
+<h3><a class="anchor" id="autotoc_md421"></a>
 Key : Anchor</h3>
 <ul>
 <li>Type : array [ 2 ]</li>
 <li>Default Value : {0.000000,0.000000}</li>
 </ul>
 <p><a class="anchor" id="Node2D_ClipSons_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md419"></a>
+<h3><a class="anchor" id="autotoc_md422"></a>
 Key : ClipSons</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="Node2D_CustomShader_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md420"></a>
+<h3><a class="anchor" id="autotoc_md423"></a>
 Key : CustomShader</h3>
 <ul>
 <li>Type : reference</li>
 </ul>
 <p><a class="anchor" id="Node2D_Dock_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md421"></a>
+<h3><a class="anchor" id="autotoc_md424"></a>
 Key : Dock</h3>
 <ul>
 <li>Type : array [ 2 ]</li>
 <li>Default Value : {0.000000,0.000000}</li>
 </ul>
 <p><a class="anchor" id="Node2D_Position_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md422"></a>
+<h3><a class="anchor" id="autotoc_md425"></a>
 Key : Position</h3>
 <ul>
 <li>Type : array [ 2 ]</li>
 <li>Default Value : {0.000000,0.000000}</li>
 </ul>
 <p><a class="anchor" id="Node2D_PostScaleX_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md423"></a>
+<h3><a class="anchor" id="autotoc_md426"></a>
 Key : PostScaleX</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 1.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_PostScaleY_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md424"></a>
+<h3><a class="anchor" id="autotoc_md427"></a>
 Key : PostScaleY</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 1.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_PreScaleX_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md425"></a>
+<h3><a class="anchor" id="autotoc_md428"></a>
 Key : PreScaleX</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 1.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_PreScaleY_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md426"></a>
+<h3><a class="anchor" id="autotoc_md429"></a>
 Key : PreScaleY</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 1.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_Priority_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md427"></a>
+<h3><a class="anchor" id="autotoc_md430"></a>
 Key : Priority</h3>
 <ul>
 <li>Type : int</li>
 <li>Default Value : 0</li>
 </ul>
 <p><a class="anchor" id="Node2D_RotationAngle_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md428"></a>
+<h3><a class="anchor" id="autotoc_md431"></a>
 Key : RotationAngle</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 0.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_SizeModeX_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md429"></a>
+<h3><a class="anchor" id="autotoc_md432"></a>
 Key : SizeModeX</h3>
 <ul>
-<li>Type : enum { "Default" , "Multiply" , "Add" }</li>
+<li>Type : enum { "Default" , "Multiply" , "Add" , "Content" , "ContentMult" , "ContentAdd" , "KeepRatio" }</li>
 <li>Default Value : Default</li>
 </ul>
 <p><a class="anchor" id="Node2D_SizeModeY_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md430"></a>
+<h3><a class="anchor" id="autotoc_md433"></a>
 Key : SizeModeY</h3>
 <ul>
-<li>Type : enum { "Default" , "Multiply" , "Add" }</li>
+<li>Type : enum { "Default" , "Multiply" , "Add" , "Content" , "ContentMult" , "ContentAdd" , "KeepRatio" }</li>
 <li>Default Value : Default</li>
 </ul>
 <p><a class="anchor" id="Node2D_SizeX_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md431"></a>
+<h3><a class="anchor" id="autotoc_md434"></a>
 Key : SizeX</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 0.000000</li>
 </ul>
 <p><a class="anchor" id="Node2D_SizeY_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md432"></a>
+<h3><a class="anchor" id="autotoc_md435"></a>
 Key : SizeY</h3>
 <ul>
 <li>Type : float</li>
 <li>Default Value : 0.000000</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md433"></a>
+<h2><a class="anchor" id="autotoc_md436"></a>
 Methods</h2>
 <p><a class="anchor" id="Node2D_GetSize_meth"></a></p>
-<h3><a class="anchor" id="autotoc_md434"></a>
+<h3><a class="anchor" id="autotoc_md437"></a>
 Key : GetSize</h3>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7a7f5ddb86d11ac8476b92eaebfcd540"></a>

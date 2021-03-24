@@ -107,18 +107,34 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_core_modifiable.html">CoreModifiable</a>*     mDynamicModule;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif //_ANONYMOUSMODULE_H_</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// use this base class for Dll modules instead of ModuleBase</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">class </span>BaseDllModule : <span class="keyword">public</span> ModuleBase</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    DECLARE_ABSTRACT_CLASS_INFO(BaseDllModule, ModuleBase, DllModule)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    DECLARE_INLINE_CONSTRUCTOR(BaseDllModule)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Init(<a class="code" href="class_kigs_core.html">KigsCore</a>* core, <span class="keyword">const</span> kstl::vector&lt;CoreModifiableAttribute*&gt;* params)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        ModuleBase::StaticInitCore(core);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif //_ANONYMOUSMODULE_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_anonymous_module_html"><div class="ttname"><a href="class_anonymous_module.html">AnonymousModule</a></div><div class="ttdoc">Base class for anonymous module.</div><div class="ttdef"><b>Definition:</b> AnonymousModule.h:22</div></div>
 <div class="ttc" id="aclass_kigs_core_html"><div class="ttname"><a href="class_kigs_core.html">KigsCore</a></div><div class="ttdef"><b>Definition:</b> Core.h:100</div></div>
-<div class="ttc" id="aclass_anonymous_module_html_a671255e3422cbb5c0f64b9da139e8b2e"><div class="ttname"><a href="class_anonymous_module.html#a671255e3422cbb5c0f64b9da139e8b2e">AnonymousModule::Close</a></div><div class="ttdeci">void Close() override</div><div class="ttdoc">close module</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:85</div></div>
+<div class="ttc" id="aclass_anonymous_module_html_a671255e3422cbb5c0f64b9da139e8b2e"><div class="ttname"><a href="class_anonymous_module.html#a671255e3422cbb5c0f64b9da139e8b2e">AnonymousModule::Close</a></div><div class="ttdeci">void Close() override</div><div class="ttdoc">close module</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:113</div></div>
 <div class="ttc" id="a_module_base_8h_html"><div class="ttname"><a href="_module_base_8h.html">ModuleBase.h</a></div><div class="ttdoc">Base class for Module.</div></div>
-<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:400</div></div>
-<div class="ttc" id="aclass_anonymous_module_html_aec361877a9cf8b4380118d78354679fa"><div class="ttname"><a href="class_anonymous_module.html#aec361877a9cf8b4380118d78354679fa">AnonymousModule::AnonymousModule</a></div><div class="ttdeci">AnonymousModule(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:17</div></div>
-<div class="ttc" id="aclass_anonymous_module_html_a88d32570f362547157645956cf76d19d"><div class="ttname"><a href="class_anonymous_module.html#a88d32570f362547157645956cf76d19d">AnonymousModule::~AnonymousModule</a></div><div class="ttdeci">virtual ~AnonymousModule()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:23</div></div>
-<div class="ttc" id="aclass_core_modifiable_html_a8596569be359b4dfed2278d63e0567ba"><div class="ttname"><a href="class_core_modifiable.html#a8596569be359b4dfed2278d63e0567ba">CoreModifiable::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Modifiable managmenent.</div><div class="ttdef"><b>Definition:</b> CoreModifiable.cpp:307</div></div>
-<div class="ttc" id="aclass_anonymous_module_html_a7600dce5f23cac2d3f452fc85c83ab0b"><div class="ttname"><a href="class_anonymous_module.html#a7600dce5f23cac2d3f452fc85c83ab0b">AnonymousModule::Update</a></div><div class="ttdeci">void Update(const Timer &amp;timer, void *addParam) override</div><div class="ttdoc">update module</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:102</div></div>
-<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:27</div></div>
+<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:480</div></div>
+<div class="ttc" id="aclass_anonymous_module_html_aec361877a9cf8b4380118d78354679fa"><div class="ttname"><a href="class_anonymous_module.html#aec361877a9cf8b4380118d78354679fa">AnonymousModule::AnonymousModule</a></div><div class="ttdeci">AnonymousModule(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:19</div></div>
+<div class="ttc" id="aclass_anonymous_module_html_a88d32570f362547157645956cf76d19d"><div class="ttname"><a href="class_anonymous_module.html#a88d32570f362547157645956cf76d19d">AnonymousModule::~AnonymousModule</a></div><div class="ttdeci">virtual ~AnonymousModule()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:25</div></div>
+<div class="ttc" id="aclass_core_modifiable_html_a8596569be359b4dfed2278d63e0567ba"><div class="ttname"><a href="class_core_modifiable.html#a8596569be359b4dfed2278d63e0567ba">CoreModifiable::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Modifiable managmenent.</div><div class="ttdef"><b>Definition:</b> CoreModifiable.cpp:316</div></div>
+<div class="ttc" id="aclass_anonymous_module_html_a7600dce5f23cac2d3f452fc85c83ab0b"><div class="ttname"><a href="class_anonymous_module.html#a7600dce5f23cac2d3f452fc85c83ab0b">AnonymousModule::Update</a></div><div class="ttdeci">void Update(const Timer &amp;timer, void *addParam) override</div><div class="ttdoc">update module</div><div class="ttdef"><b>Definition:</b> AnonymousModule.cpp:130</div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:28</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

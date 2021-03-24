@@ -296,6 +296,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderingScreen</b><
 <tr class="memitem:ac7f630cecd8e03a8f40a5e9e225cc58a"><td class="memItemLeft" align="right" valign="top"><a id="ac7f630cecd8e03a8f40a5e9e225cc58a"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>TextureFileManager</b></td></tr>
 <tr class="separator:ac7f630cecd8e03a8f40a5e9e225cc58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb9b31633b4f47ec6f12bca0cdafd4b"><td class="memItemLeft" align="right" valign="top"><a id="a3eb9b31633b4f47ec6f12bca0cdafd4b"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TextureHandler</b></td></tr>
+<tr class="separator:a3eb9b31633b4f47ec6f12bca0cdafd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -340,17 +343,17 @@ template&lt;typename StringType &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>manage a texture. </p>
 <p>TRUE if we want the texture to be resized to a power of two at loading (done on the specific part !)</p>
-<h2><a class="anchor" id="autotoc_md562"></a>
+<h2><a class="anchor" id="autotoc_md564"></a>
 Attributes</h2>
 <p><a class="anchor" id="Texture_ForcePow2_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md563"></a>
+<h3><a class="anchor" id="autotoc_md565"></a>
 Key : ForcePow2 (Init attribute)</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="Texture_IsDynamic_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md564"></a>
+<h3><a class="anchor" id="autotoc_md566"></a>
 Key : IsDynamic (Init attribute)</h3>
 <ul>
 <li>Type : bool</li>
@@ -358,7 +361,7 @@ Key : IsDynamic (Init attribute)</h3>
 </ul>
 <p>TRUE if we want the texture be directly accessed from memory (platform dependant)</p>
 <p><a class="anchor" id="Texture_FileName_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md565"></a>
+<h3><a class="anchor" id="autotoc_md567"></a>
 Key : FileName</h3>
 <ul>
 <li>Type : string</li>
@@ -366,14 +369,14 @@ Key : FileName</h3>
 </ul>
 <p>file name of the used texture</p>
 <p><a class="anchor" id="Texture_ForceNearest_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md566"></a>
+<h3><a class="anchor" id="autotoc_md568"></a>
 Key : ForceNearest</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="Texture_HasMipmap_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md567"></a>
+<h3><a class="anchor" id="autotoc_md569"></a>
 Key : HasMipmap</h3>
 <ul>
 <li>Type : bool</li>
@@ -381,7 +384,7 @@ Key : HasMipmap</h3>
 </ul>
 <p>TRUE if the texture has mipmap.</p>
 <p><a class="anchor" id="Texture_Height_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md568"></a>
+<h3><a class="anchor" id="autotoc_md570"></a>
 Key : Height</h3>
 <ul>
 <li>Type : uint</li>
@@ -389,14 +392,14 @@ Key : Height</h3>
 </ul>
 <p>width of the texture</p>
 <p><a class="anchor" id="Texture_RenderPassMask_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md569"></a>
+<h3><a class="anchor" id="autotoc_md571"></a>
 Key : RenderPassMask</h3>
 <ul>
 <li>Type : uint</li>
 <li>Default Value : 4294967295</li>
 </ul>
 <p><a class="anchor" id="Texture_Repeat_U_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md570"></a>
+<h3><a class="anchor" id="autotoc_md572"></a>
 Key : Repeat_U</h3>
 <ul>
 <li>Type : bool</li>
@@ -404,7 +407,7 @@ Key : Repeat_U</h3>
 </ul>
 <p>TRUE if I repeat the texture on the u axis.</p>
 <p><a class="anchor" id="Texture_Repeat_V_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md571"></a>
+<h3><a class="anchor" id="autotoc_md573"></a>
 Key : Repeat_V</h3>
 <ul>
 <li>Type : bool</li>
@@ -412,21 +415,21 @@ Key : Repeat_V</h3>
 </ul>
 <p>TRUE if I repeat the texture on the v axis.</p>
 <p><a class="anchor" id="Texture_Show_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md572"></a>
+<h3><a class="anchor" id="autotoc_md574"></a>
 Key : Show</h3>
 <ul>
 <li>Type : uint</li>
 <li>Default Value : 4294967295</li>
 </ul>
 <p><a class="anchor" id="Texture_Sortable_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md573"></a>
+<h3><a class="anchor" id="autotoc_md575"></a>
 Key : Sortable</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="Texture_TextureType_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md574"></a>
+<h3><a class="anchor" id="autotoc_md576"></a>
 Key : TextureType</h3>
 <ul>
 <li>Type : int</li>
@@ -434,14 +437,14 @@ Key : TextureType</h3>
 </ul>
 <p>type of the used texture</p>
 <p><a class="anchor" id="Texture_TransarencyFlag_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md575"></a>
+<h3><a class="anchor" id="autotoc_md577"></a>
 Key : TransarencyFlag</h3>
 <ul>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
 <p><a class="anchor" id="Texture_TransparencyType_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md576"></a>
+<h3><a class="anchor" id="autotoc_md578"></a>
 Key : TransparencyType</h3>
 <ul>
 <li>Type : int</li>
@@ -449,7 +452,7 @@ Key : TransparencyType</h3>
 </ul>
 <p>0 = no transparency, 1 = billboard (binary transparency), 2 = need blend, -1 = to test on file loading</p>
 <p><a class="anchor" id="Texture_Width_attr"></a></p>
-<h3><a class="anchor" id="autotoc_md577"></a>
+<h3><a class="anchor" id="autotoc_md579"></a>
 Key : Width</h3>
 <ul>
 <li>Type : uint</li>

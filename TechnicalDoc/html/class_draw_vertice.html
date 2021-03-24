@@ -311,6 +311,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_vertice.html#a5f5826ed9ec2fa1e843367fe855730d6">mTexCoordFormat</a> = KIGS_FLOAT</td></tr>
 <tr class="memdesc:a5f5826ed9ec2fa1e843367fe855730d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">format of tex coord <br /></td></tr>
 <tr class="separator:a5f5826ed9ec2fa1e843367fe855730d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af404f11338340271c9960e22e2c84b28"><td class="memItemLeft" align="right" valign="top"><a id="af404f11338340271c9960e22e2c84b28"></a>
+<a class="el" href="classma_numeric_heritage.html">maInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_draw_vertice.html#af404f11338340271c9960e22e2c84b28">mTransparencyType</a> = BASE_ATTRIBUTE(TransparencyType, -1)</td></tr>
+<tr class="memdesc:af404f11338340271c9960e22e2c84b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 = no transparency, 1 = billboard (binary transparency), 2 = need blend, -1 = use texture transparency type if available otherwise no transparency <br /></td></tr>
+<tr class="separator:af404f11338340271c9960e22e2c84b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -467,8 +471,16 @@ Key : TransarencyFlag</h3>
 <li>Type : bool</li>
 <li>Default Value : false</li>
 </ul>
-<p><a class="anchor" id="DrawVertice_WireMode_attr"></a></p>
+<p><a class="anchor" id="DrawVertice_TransparencyType_attr"></a></p>
 <h3><a class="anchor" id="autotoc_md276"></a>
+Key : TransparencyType</h3>
+<ul>
+<li>Type : int</li>
+<li>Default Value : -1</li>
+</ul>
+<p>0 = no transparency, 1 = billboard (binary transparency), 2 = need blend, -1 = use texture transparency type if available otherwise no transparency</p>
+<p><a class="anchor" id="DrawVertice_WireMode_attr"></a></p>
+<h3><a class="anchor" id="autotoc_md277"></a>
 Key : WireMode</h3>
 <ul>
 <li>Type : bool</li>

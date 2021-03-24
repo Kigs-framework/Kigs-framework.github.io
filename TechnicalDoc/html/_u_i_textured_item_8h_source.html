@@ -76,57 +76,86 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _UITexturedItem_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_i_drawable_item_8h.html">UI/UIDrawableItem.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;UIVerticesInfo.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;SmartPointer.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// ****************************************</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// * UITexturedItem class</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// * --------------------------------------</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span><span class="comment">// ****************************************</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_u_i_textured_item.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_i_textured_item.html">UITexturedItem</a> : <span class="keyword">public</span> <a class="code" href="class_u_i_drawable_item.html">UIDrawableItem</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    DECLARE_CLASS_INFO(<a class="code" href="class_u_i_textured_item.html">UITexturedItem</a>, <a class="code" href="class_u_i_drawable_item.html">UIDrawableItem</a>, 2DLayers);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_u_i_textured_item.html#a85d93e5bf2863b4610b356e9ac11b620">UITexturedItem</a>(<span class="keyword">const</span> kstl::string&amp; name, DECLARE_CLASS_NAME_TREE_ARG);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_texture.html">Texture</a>* GetTexture() { <span class="keywordflow">return</span> mTexturePointer.get(); }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span>     SetTexture(<a class="code" href="class_texture.html">Texture</a>* t);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// manage texture directly added </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="class_u_i_textured_item.html#a133ec4c35832be23be1b8c4581eb0319">addItem</a>(<span class="keyword">const</span> CMSP&amp; item, ItemPosition pos = Last DECLARE_DEFAULT_LINK_NAME) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span>    removeItem(<span class="keyword">const</span> CMSP&amp; item DECLARE_DEFAULT_LINK_NAME) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_u_i_textured_item.html">UITexturedItem</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> NotifyUpdate(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> labelid) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> SetTexUV(UIVerticesInfo * aQI) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> GetTransparencyType() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> PreDraw(<a class="code" href="class_trav_state.html">TravState</a>* state) <span class="keyword">override</span>;  <span class="comment">// use for texture predraw if needed</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> PostDraw(<a class="code" href="class_trav_state.html">TravState</a>* state) <span class="keyword">override</span>; <span class="comment">// use for texture postdraw if needed</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    SmartPointer&lt;Texture&gt;               mTexturePointer;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    v2f mUVMin{ FLT_MAX, FLT_MAX };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    v2f mUVMax{ FLT_MAX, FLT_MAX };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif //_UIItem_H_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_i_shape_delegate_8h.html">UI/UIShapeDelegate.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;UIVerticesInfo.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;SmartPointer.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_texture_handler_8h.html">TextureHandler.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// ****************************************</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// * UITexturedItem class</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// * --------------------------------------</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span><span class="comment">// ****************************************</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_u_i_textured_item.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_i_textured_item.html">UITexturedItem</a> : <span class="keyword">public</span> <a class="code" href="class_u_i_drawable_item.html">UIDrawableItem</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    DECLARE_CLASS_INFO(<a class="code" href="class_u_i_textured_item.html">UITexturedItem</a>, <a class="code" href="class_u_i_drawable_item.html">UIDrawableItem</a>, 2DLayers);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_u_i_textured_item.html#a85d93e5bf2863b4610b356e9ac11b620">UITexturedItem</a>(<span class="keyword">const</span> kstl::string&amp; name, DECLARE_CLASS_NAME_TREE_ARG);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span>    HasTexture()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (mTexturePointer)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> mTexturePointer-&gt;HasTexture();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// TODO check if needed</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    SP&lt;TextureHandler&gt; GetTexture() { <span class="keywordflow">return</span> mTexturePointer; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//void     SetTexture(const SP&lt;TextureHandler&gt;&amp; t);</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// manage texture directly added </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="class_u_i_textured_item.html#a133ec4c35832be23be1b8c4581eb0319">addItem</a>(<span class="keyword">const</span> CMSP&amp; item, ItemPosition pos = Last DECLARE_DEFAULT_LINK_NAME) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span>    removeItem(<span class="keyword">const</span> CMSP&amp; item DECLARE_DEFAULT_LINK_NAME) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span>    TextureNotifyUpdate(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  labelid);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> v2f GetContentSize()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (HasTexture())</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            v2f textureSize;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            mTexturePointer-&gt;GetSize(textureSize.x, textureSize.y);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> textureSize;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> ParentClassType::GetContentSize();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> v2f getDrawablePos(<span class="keyword">const</span> v2f&amp; pos)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (mTexturePointer)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> mTexturePointer-&gt;getDrawablePos(pos);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> pos;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_u_i_textured_item.html">UITexturedItem</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> SetTexUV(UIVerticesInfo * aQI) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> GetTransparencyType() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> PreDraw(<a class="code" href="class_trav_state.html">TravState</a>* state) <span class="keyword">override</span>;  <span class="comment">// use for texture predraw if needed</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> PostDraw(<a class="code" href="class_trav_state.html">TravState</a>* state) <span class="keyword">override</span>; <span class="comment">// use for texture postdraw if needed</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    INSERT_FORWARDSP(<a class="code" href="class_texture_handler.html">TextureHandler</a>,mTexturePointer);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    WRAP_METHODS(TextureNotifyUpdate);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif //_UIItem_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">manage a texture.</div><div class="ttdef"><b>Definition:</b> Texture.h:28</div></div>
 <div class="ttc" id="aclass_u_i_textured_item_html_a85d93e5bf2863b4610b356e9ac11b620"><div class="ttname"><a href="class_u_i_textured_item.html#a85d93e5bf2863b4610b356e9ac11b620">UITexturedItem::UITexturedItem</a></div><div class="ttdeci">UITexturedItem(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div></div>
-<div class="ttc" id="aclass_u_i_textured_item_html_a133ec4c35832be23be1b8c4581eb0319"><div class="ttname"><a href="class_u_i_textured_item.html#a133ec4c35832be23be1b8c4581eb0319">UITexturedItem::addItem</a></div><div class="ttdeci">bool addItem(const CMSP &amp;item, ItemPosition pos=Last DECLARE_DEFAULT_LINK_NAME) override</div><div class="ttdoc">add item at first or last position</div><div class="ttdef"><b>Definition:</b> UITexturedItem.cpp:159</div></div>
-<div class="ttc" id="aclass_u_i_drawable_item_html"><div class="ttname"><a href="class_u_i_drawable_item.html">UIDrawableItem</a></div><div class="ttdoc">UIItem to be drawn.</div><div class="ttdef"><b>Definition:</b> UIDrawableItem.h:25</div></div>
+<div class="ttc" id="a_texture_handler_8h_html"><div class="ttname"><a href="_texture_handler_8h.html">TextureHandler.h</a></div></div>
+<div class="ttc" id="aclass_texture_handler_html"><div class="ttname"><a href="class_texture_handler.html">TextureHandler</a></div><div class="ttdoc">handle texture drawing. A TextureHandler is used to manipulate a texture or animated texture or sprit...</div><div class="ttdef"><b>Definition:</b> TextureHandler.h:22</div></div>
+<div class="ttc" id="aclass_u_i_textured_item_html_a133ec4c35832be23be1b8c4581eb0319"><div class="ttname"><a href="class_u_i_textured_item.html#a133ec4c35832be23be1b8c4581eb0319">UITexturedItem::addItem</a></div><div class="ttdeci">bool addItem(const CMSP &amp;item, ItemPosition pos=Last DECLARE_DEFAULT_LINK_NAME) override</div><div class="ttdoc">add item at first or last position</div><div class="ttdef"><b>Definition:</b> UITexturedItem.cpp:146</div></div>
+<div class="ttc" id="aclass_u_i_drawable_item_html"><div class="ttname"><a href="class_u_i_drawable_item.html">UIDrawableItem</a></div><div class="ttdoc">UIItem to be drawn.</div><div class="ttdef"><b>Definition:</b> UIDrawableItem.h:26</div></div>
 <div class="ttc" id="a_u_i_drawable_item_8h_html"><div class="ttname"><a href="_u_i_drawable_item_8h.html">UIDrawableItem.h</a></div></div>
-<div class="ttc" id="aclass_u_i_textured_item_html"><div class="ttname"><a href="class_u_i_textured_item.html">UITexturedItem</a></div><div class="ttdoc">Textured UIDrawableItem.</div><div class="ttdef"><b>Definition:</b> UITexturedItem.h:21</div></div>
-<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="_texture_8h.html">Texture.h</a></div></div>
-<div class="ttc" id="aclass_trav_state_html"><div class="ttname"><a href="class_trav_state.html">TravState</a></div><div class="ttdoc">Base class used to store current scene traversal state.</div><div class="ttdef"><b>Definition:</b> TravState.h:71</div></div>
+<div class="ttc" id="aclass_u_i_textured_item_html"><div class="ttname"><a href="class_u_i_textured_item.html">UITexturedItem</a></div><div class="ttdoc">Textured UIDrawableItem.</div><div class="ttdef"><b>Definition:</b> UITexturedItem.h:22</div></div>
+<div class="ttc" id="a_u_i_shape_delegate_8h_html"><div class="ttname"><a href="_u_i_shape_delegate_8h.html">UIShapeDelegate.h</a></div></div>
+<div class="ttc" id="aclass_trav_state_html"><div class="ttname"><a href="class_trav_state.html">TravState</a></div><div class="ttdoc">Base class used to store current scene traversal state.</div><div class="ttdef"><b>Definition:</b> TravState.h:72</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

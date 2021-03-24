@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    DECLARE_ABSTRACT_CLASS_INFO(<a class="code" href="class_core_base_application.html">CoreBaseApplication</a>, <a class="code" href="class_core_modifiable.html">CoreModifiable</a>, <a class="code" href="class_kigs_core.html">KigsCore</a>)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_core_base_application.html#a39fe2378608881c4843ead57ef184308">CoreBaseApplication</a>(<span class="keyword">const</span> kstl::string&amp; name, DECLARE_CLASS_NAME_TREE_ARG);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_core_base_application.html#a31e84d6af7bd52be48a95cfe13b2acd6">CoreBaseApplication</a>(<span class="keyword">const</span> std::string&amp; name, DECLARE_CLASS_NAME_TREE_ARG);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_core_base_application.html#accdf90fae88f38ff0e0e5132cdb6e311">~CoreBaseApplication</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -149,14 +149,14 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// args management</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span>            PushArg(<span class="keyword">const</span> kstl::string&amp; arg);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span>            PushArg(<span class="keyword">const</span> std::string&amp; arg);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    GetArgCount()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> ((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)mArgs.size());</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> kstl::string* HasArg(<span class="keyword">const</span> kstl::string&amp; arg, <span class="keywordtype">bool</span> startWith=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> std::string*  HasArg(<span class="keyword">const</span> std::string&amp; arg, <span class="keywordtype">bool</span> startWith=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    SP&lt;Timer&gt;&amp;          GetApplicationTimer()</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
@@ -181,69 +181,70 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> mBuildVersion;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="class_core_base_application.html">CoreBaseApplication</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_core_base_application.html">CoreBaseApplication</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedPreInit() {};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a3f5931d7acc0f8638ca8e599d4699881">ProtectedInit</a>()=0;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a063740e59120d0bbfb0af3ca806811fb">ProtectedUpdate</a>()=0;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a2fcf54bdfcb32352e12d25228ce7ca27">ProtectedClose</a>()=0;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedMessage(<span class="keywordtype">int</span> <span class="comment">/* mtype */</span>,<span class="keywordtype">int</span> <span class="comment">/* Params */</span>){}</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">  145</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">ProtectedSleep</a>(){;}</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedResume(){;}</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedExternAskExit(){;}</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> DoAutoUpdate();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="classma_bool_heritage.html">maBool</a>          mNeedExit = BASE_ATTRIBUTE(<a class="code" href="class_core_base_application.html#ab67059faa2cb91e3dadde7c430555351">NeedExit</a>,<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">bool</span>            mHasFocus;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span>   mAlreadyInUpdate;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">bool</span>            mInitBaseModules;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    SP&lt;Timer&gt;           mApplicationTimer;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mUpdateSleepTime;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    kstl::vector&lt;kstl::string&gt;          mArgs;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    kstl::vector&lt;CoreModifiable*&gt;       mAutoUpdateList;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mBackKeyState;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="class_anonymous_module.html">AnonymousModule</a>*                    mEditor;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">bool</span> mAutoUpdateDone = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    std::recursive_mutex mAutoUpdateMutex;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">float</span>       mBuildVersion = 1.0;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">const</span> std::vector&lt;CoreModifiable*&gt; GetAutoUpdateList() { <span class="keywordflow">return</span> mAutoUpdateList; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="class_core_base_application.html">CoreBaseApplication</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_core_base_application.html">CoreBaseApplication</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedPreInit() {};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a3f5931d7acc0f8638ca8e599d4699881">ProtectedInit</a>()=0;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a063740e59120d0bbfb0af3ca806811fb">ProtectedUpdate</a>()=0;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a2fcf54bdfcb32352e12d25228ce7ca27">ProtectedClose</a>()=0;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedMessage(<span class="keywordtype">int</span> <span class="comment">/* mtype */</span>,<span class="keywordtype">int</span> <span class="comment">/* Params */</span>){}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">  146</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">ProtectedSleep</a>(){;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedResume(){;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    ProtectedExternAskExit(){;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> DoAutoUpdate();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classma_bool_heritage.html">maBool</a>          mNeedExit = BASE_ATTRIBUTE(<a class="code" href="class_core_base_application.html#ab67059faa2cb91e3dadde7c430555351">NeedExit</a>,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">bool</span>            mHasFocus;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span>   mAlreadyInUpdate;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">bool</span>            mInitBaseModules;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    SP&lt;Timer&gt;           mApplicationTimer;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mUpdateSleepTime;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::vector&lt;std::string&gt;            mArgs;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    std::vector&lt;CoreModifiable*&gt;        mAutoUpdateList;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mBackKeyState;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="class_anonymous_module.html">AnonymousModule</a>*                    mEditor;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">bool</span> mAutoUpdateDone = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    std::recursive_mutex mAutoUpdateMutex;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">float</span>       mBuildVersion = 1.0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;};</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_platform_base_application_html"><div class="ttname"><a href="class_platform_base_application.html">PlatformBaseApplication</a></div><div class="ttdoc">This class must not be virtual because there's a double inheritance.</div><div class="ttdef"><b>Definition:</b> PlatformBaseApplication.h:5</div></div>
 <div class="ttc" id="aclass_core_base_application_html"><div class="ttname"><a href="class_core_base_application.html">CoreBaseApplication</a></div><div class="ttdoc">Base class for applications.</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.h:32</div></div>
 <div class="ttc" id="aclass_anonymous_module_html"><div class="ttname"><a href="class_anonymous_module.html">AnonymousModule</a></div><div class="ttdoc">Base class for anonymous module.</div><div class="ttdef"><b>Definition:</b> AnonymousModule.h:22</div></div>
 <div class="ttc" id="aclass_core_base_application_html_accdf90fae88f38ff0e0e5132cdb6e311"><div class="ttname"><a href="class_core_base_application.html#accdf90fae88f38ff0e0e5132cdb6e311">CoreBaseApplication::~CoreBaseApplication</a></div><div class="ttdeci">virtual ~CoreBaseApplication()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.cpp:30</div></div>
+<div class="ttc" id="aclass_core_base_application_html_a31e84d6af7bd52be48a95cfe13b2acd6"><div class="ttname"><a href="class_core_base_application.html#a31e84d6af7bd52be48a95cfe13b2acd6">CoreBaseApplication::CoreBaseApplication</a></div><div class="ttdeci">CoreBaseApplication(const std::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.cpp:14</div></div>
 <div class="ttc" id="aclass_core_base_application_html_a3f5931d7acc0f8638ca8e599d4699881"><div class="ttname"><a href="class_core_base_application.html#a3f5931d7acc0f8638ca8e599d4699881">CoreBaseApplication::ProtectedInit</a></div><div class="ttdeci">virtual void ProtectedInit()=0</div><div class="ttdoc">this Init is to overload</div></div>
-<div class="ttc" id="aclass_core_base_application_html_a5714e0285d6ae8b9ddc22b40e7932d2d"><div class="ttname"><a href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">CoreBaseApplication::ProtectedSleep</a></div><div class="ttdeci">virtual void ProtectedSleep()</div><div class="ttdoc">to overload if needed</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.h:145</div></div>
+<div class="ttc" id="aclass_core_base_application_html_a5714e0285d6ae8b9ddc22b40e7932d2d"><div class="ttname"><a href="class_core_base_application.html#a5714e0285d6ae8b9ddc22b40e7932d2d">CoreBaseApplication::ProtectedSleep</a></div><div class="ttdeci">virtual void ProtectedSleep()</div><div class="ttdoc">to overload if needed</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.h:146</div></div>
 <div class="ttc" id="aclass_core_base_application_html_a063740e59120d0bbfb0af3ca806811fb"><div class="ttname"><a href="class_core_base_application.html#a063740e59120d0bbfb0af3ca806811fb">CoreBaseApplication::ProtectedUpdate</a></div><div class="ttdeci">virtual void ProtectedUpdate()=0</div><div class="ttdoc">this update is to overload</div></div>
 <div class="ttc" id="aclass_kigs_core_html"><div class="ttname"><a href="class_kigs_core.html">KigsCore</a></div><div class="ttdef"><b>Definition:</b> Core.h:100</div></div>
 <div class="ttc" id="a_timer_8h_html"><div class="ttname"><a href="_timer_8h.html">Timer.h</a></div><div class="ttdoc">Mesure time.</div></div>
 <div class="ttc" id="aclass_core_base_application_html_ab67059faa2cb91e3dadde7c430555351"><div class="ttname"><a href="class_core_base_application.html#ab67059faa2cb91e3dadde7c430555351">CoreBaseApplication::NeedExit</a></div><div class="ttdeci">bool NeedExit()</div><div class="ttdoc">return true if application can exit</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.h:64</div></div>
 <div class="ttc" id="aclassma_bool_heritage_html"><div class="ttname"><a href="classma_bool_heritage.html">maBoolHeritage&lt; 0 &gt;</a></div></div>
 <div class="ttc" id="aclass_core_base_application_html_a2fcf54bdfcb32352e12d25228ce7ca27"><div class="ttname"><a href="class_core_base_application.html#a2fcf54bdfcb32352e12d25228ce7ca27">CoreBaseApplication::ProtectedClose</a></div><div class="ttdeci">virtual void ProtectedClose()=0</div><div class="ttdoc">this close is to overload</div></div>
-<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:400</div></div>
+<div class="ttc" id="aclass_core_modifiable_html"><div class="ttname"><a href="class_core_modifiable.html">CoreModifiable</a></div><div class="ttdoc">Base class for Kigs framework objects. CoreModifiable class manage a list of attributes supporting re...</div><div class="ttdef"><b>Definition:</b> CoreModifiable.h:480</div></div>
 <div class="ttc" id="a_core_modifiable_8h_html"><div class="ttname"><a href="_core_modifiable_8h.html">CoreModifiable.h</a></div></div>
-<div class="ttc" id="aclass_core_base_application_html_a39fe2378608881c4843ead57ef184308"><div class="ttname"><a href="class_core_base_application.html#a39fe2378608881c4843ead57ef184308">CoreBaseApplication::CoreBaseApplication</a></div><div class="ttdeci">CoreBaseApplication(const kstl::string &amp;name, DECLARE_CLASS_NAME_TREE_ARG)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> CoreBaseApplication.cpp:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

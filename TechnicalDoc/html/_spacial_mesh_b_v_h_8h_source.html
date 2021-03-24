@@ -315,29 +315,32 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_spacial_mesh_b_v_h.html">SpacialMeshBVH</a>* BuildFromMesh(<a class="code" href="class_modern_mesh.html">ModernMesh</a>* mesh,<span class="keyword">const</span> Matrix3x4&amp; LtoGMatrix,<span class="keywordtype">bool</span> onlyHorizontalAndVertical);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_spacial_mesh_b_v_h.html">SpacialMeshBVH</a>();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#ifdef KIGS_TOOLS</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// draw debug mInfo using GLSLDrawDebug</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> DrawDebug(<span class="keyword">const</span> Point3D&amp; pos, <span class="keyword">const</span>  Matrix3x4* mat, <a class="code" href="class_timer.html">Timer</a> *timer);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_spacial_mesh_b_v_h.html">SpacialMeshBVH</a>* getSpacialMeshBVH()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">const</span> std::vector&lt;SpacialMeshBVHNode&gt;&amp; getNodes()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">return</span> mNodeList;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;};</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#endif //_SPACIALMESHBVH_H_</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    std::vector&lt;v3f&gt; GetVertices() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#ifdef KIGS_TOOLS</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// draw debug mInfo using GLSLDrawDebug</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> DrawDebug(<span class="keyword">const</span> Point3D&amp; pos, <span class="keyword">const</span>  Matrix3x4* mat, <a class="code" href="class_timer.html">Timer</a> *timer);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_spacial_mesh_b_v_h.html">SpacialMeshBVH</a>* getSpacialMeshBVH()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">const</span> std::vector&lt;SpacialMeshBVHNode&gt;&amp; getNodes()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> mNodeList;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;};</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif //_SPACIALMESHBVH_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_modern_mesh_html"><div class="ttname"><a href="class_modern_mesh.html">ModernMesh</a></div><div class="ttdoc">Optimized mesh class.</div><div class="ttdef"><b>Definition:</b> ModernMesh.h:28</div></div>
 <div class="ttc" id="a_node3_d_8h_html"><div class="ttname"><a href="_node3_d_8h.html">Node3D.h</a></div></div>
 <div class="ttc" id="a_core_modifiable_8h_html"><div class="ttname"><a href="_core_modifiable_8h.html">CoreModifiable.h</a></div></div>
 <div class="ttc" id="aclass_collision_base_object_html"><div class="ttname"><a href="class_collision_base_object.html">CollisionBaseObject</a></div><div class="ttdoc">Base class for collision object (sphere, box, mesh...)</div><div class="ttdef"><b>Definition:</b> CollisionBaseObject.h:25</div></div>
-<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:27</div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:28</div></div>
 <div class="ttc" id="aclass_spacial_mesh_b_v_h_html"><div class="ttname"><a href="class_spacial_mesh_b_v_h.html">SpacialMeshBVH</a></div><div class="ttdoc">Bounding volume hierarchy structure.</div><div class="ttdef"><b>Definition:</b> SpacialMeshBVH.h:148</div></div>
 <div class="ttc" id="a_collision_base_object_8h_html"><div class="ttname"><a href="_collision_base_object_8h.html">CollisionBaseObject.h</a></div></div>
 <div class="ttc" id="aclass_spacial_mesh_b_v_h_node_html"><div class="ttname"><a href="class_spacial_mesh_b_v_h_node.html">SpacialMeshBVHNode</a></div><div class="ttdoc">Bounding volume hierarchy node structure.</div><div class="ttdef"><b>Definition:</b> SpacialMeshBVH.h:24</div></div>

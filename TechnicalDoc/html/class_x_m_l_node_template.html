@@ -88,10 +88,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a2703246ceb6b6799d69fcbbf3fecbac8">XMLNodeTemplate</a> (<a class="el" href="_x_m_l_node_8h.html#a09046a26c20558b95258cbe67a952fe8">XMLNodeType</a> type, const StringType &amp;name)</td></tr>
 <tr class="memdesc:a2703246ceb6b6799d69fcbbf3fecbac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for the given type and name <br /></td></tr>
 <tr class="separator:a2703246ceb6b6799d69fcbbf3fecbac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2faac51a05b589a7d799cbb117eb3a4"><td class="memItemLeft" align="right" valign="top"><a id="aa2faac51a05b589a7d799cbb117eb3a4"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#aa2faac51a05b589a7d799cbb117eb3a4">~XMLNodeTemplate</a> ()</td></tr>
-<tr class="memdesc:aa2faac51a05b589a7d799cbb117eb3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor ( no need for virtual as <a class="el" href="class_x_m_l_node_template.html" title="Manage XML node structure using string or string_view.">XMLNodeTemplate</a> will not have inheritance ) <br /></td></tr>
-<tr class="separator:aa2faac51a05b589a7d799cbb117eb3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29fb62a66e5e7df93287278f03955ee8"><td class="memItemLeft" align="right" valign="top"><a id="a29fb62a66e5e7df93287278f03955ee8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a29fb62a66e5e7df93287278f03955ee8">setName</a> (const StringType &amp;name)</td></tr>
 <tr class="memdesc:a29fb62a66e5e7df93287278f03955ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">set node name <br /></td></tr>
@@ -108,34 +104,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a1c6afd24d5e2a5d2ea831e165c193672">setFloat</a> (const kfloat value)</td></tr>
 <tr class="memdesc:a1c6afd24d5e2a5d2ea831e165c193672"><td class="mdescLeft">&#160;</td><td class="mdescRight">set node value with given kfloat <br /></td></tr>
 <tr class="separator:a1c6afd24d5e2a5d2ea831e165c193672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a871ed6b16892bccfe3712e549f128"><td class="memItemLeft" align="right" valign="top"><a id="a67a871ed6b16892bccfe3712e549f128"></a>
-const StringType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a67a871ed6b16892bccfe3712e549f128">getName</a> () const</td></tr>
-<tr class="memdesc:a67a871ed6b16892bccfe3712e549f128"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node name <br /></td></tr>
-<tr class="separator:a67a871ed6b16892bccfe3712e549f128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a760fa05ac4ef9065a8988a62bd3f3c2f"><td class="memItemLeft" align="right" valign="top"><a id="a760fa05ac4ef9065a8988a62bd3f3c2f"></a>
-const StringType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a760fa05ac4ef9065a8988a62bd3f3c2f">getString</a> ()</td></tr>
-<tr class="memdesc:a760fa05ac4ef9065a8988a62bd3f3c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node value as a string <br /></td></tr>
-<tr class="separator:a760fa05ac4ef9065a8988a62bd3f3c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35b473b4a1a6fbc55831b2525f305140"><td class="memItemLeft" align="right" valign="top"><a id="a35b473b4a1a6fbc55831b2525f305140"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a35b473b4a1a6fbc55831b2525f305140">getInt</a> ()</td></tr>
-<tr class="memdesc:a35b473b4a1a6fbc55831b2525f305140"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node value as an int <br /></td></tr>
-<tr class="separator:a35b473b4a1a6fbc55831b2525f305140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a451ae0284e626599710283ddab66b2ce"><td class="memItemLeft" align="right" valign="top"><a id="a451ae0284e626599710283ddab66b2ce"></a>
-kfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a451ae0284e626599710283ddab66b2ce">getFloat</a> ()</td></tr>
-<tr class="memdesc:a451ae0284e626599710283ddab66b2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node value as a kfloat <br /></td></tr>
-<tr class="separator:a451ae0284e626599710283ddab66b2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a914a9b00f720fcae46b55e5cd25006f3"><td class="memItemLeft" align="right" valign="top"><a id="a914a9b00f720fcae46b55e5cd25006f3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a914a9b00f720fcae46b55e5cd25006f3">getChildCount</a> ()</td></tr>
-<tr class="memdesc:a914a9b00f720fcae46b55e5cd25006f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node's children count <br /></td></tr>
-<tr class="separator:a914a9b00f720fcae46b55e5cd25006f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adedd442c5e0192b3783a55566b6d9df5"><td class="memItemLeft" align="right" valign="top"><a id="adedd442c5e0192b3783a55566b6d9df5"></a>
-<a class="el" href="class_x_m_l_node_template.html">XMLNodeTemplate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#adedd442c5e0192b3783a55566b6d9df5">getChildElement</a> (unsigned int index=0)</td></tr>
-<tr class="memdesc:adedd442c5e0192b3783a55566b6d9df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return child node by index <br /></td></tr>
-<tr class="separator:adedd442c5e0192b3783a55566b6d9df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4522096052e3ce1908b1f7ecd93042e"><td class="memItemLeft" align="right" valign="top"><a id="ac4522096052e3ce1908b1f7ecd93042e"></a>
-<a class="el" href="class_x_m_l_node_template.html">XMLNodeTemplate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#ac4522096052e3ce1908b1f7ecd93042e">getChildElement</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:ac4522096052e3ce1908b1f7ecd93042e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return child node by name <br /></td></tr>
-<tr class="separator:ac4522096052e3ce1908b1f7ecd93042e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51d8651650c82b06423aadc6b6a9901"><td class="memItemLeft" align="right" valign="top"><a id="af51d8651650c82b06423aadc6b6a9901"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#af51d8651650c82b06423aadc6b6a9901">getInt</a> () const override</td></tr>
+<tr class="memdesc:af51d8651650c82b06423aadc6b6a9901"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node value as an int <br /></td></tr>
+<tr class="separator:af51d8651650c82b06423aadc6b6a9901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98faa765b3501033cb9cc5a2d30c573"><td class="memItemLeft" align="right" valign="top"><a id="ae98faa765b3501033cb9cc5a2d30c573"></a>
+kfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#ae98faa765b3501033cb9cc5a2d30c573">getFloat</a> () const override</td></tr>
+<tr class="memdesc:ae98faa765b3501033cb9cc5a2d30c573"><td class="mdescLeft">&#160;</td><td class="mdescRight">return node value as a kfloat <br /></td></tr>
+<tr class="separator:ae98faa765b3501033cb9cc5a2d30c573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda242d8fa92b91e6ae1a9dbe95f6884"><td class="memItemLeft" align="right" valign="top"><a id="afda242d8fa92b91e6ae1a9dbe95f6884"></a>
 <a class="el" href="class_x_m_l_node_template.html">XMLNodeTemplate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#afda242d8fa92b91e6ae1a9dbe95f6884">addChildElement</a> (const StringType &amp;childName)</td></tr>
 <tr class="memdesc:afda242d8fa92b91e6ae1a9dbe95f6884"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new child with given name and return the corresponding node <br /></td></tr>
@@ -148,22 +124,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <a class="el" href="class_x_m_l_node_template.html">XMLNodeTemplate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#ae28efb81be575d04826fc3e0389e9480">addChildElementInteger</a> (const StringType &amp;childName, int integerValue)</td></tr>
 <tr class="memdesc:ae28efb81be575d04826fc3e0389e9480"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new child with given name and int value and return the corresponding node <br /></td></tr>
 <tr class="separator:ae28efb81be575d04826fc3e0389e9480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46c21b91b016a19ffd46fae7e652ee81"><td class="memItemLeft" align="right" valign="top"><a id="a46c21b91b016a19ffd46fae7e652ee81"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a46c21b91b016a19ffd46fae7e652ee81">getAttributeCount</a> ()</td></tr>
-<tr class="memdesc:a46c21b91b016a19ffd46fae7e652ee81"><td class="mdescLeft">&#160;</td><td class="mdescRight">return attribute count for this node <br /></td></tr>
-<tr class="separator:a46c21b91b016a19ffd46fae7e652ee81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7059aefb22e29c50059d6ce64aa032"><td class="memItemLeft" align="right" valign="top"><a id="a3e7059aefb22e29c50059d6ce64aa032"></a>
-<a class="el" href="class_x_m_l_attribute_template.html">XMLAttributeTemplate</a>&lt; StringType &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a3e7059aefb22e29c50059d6ce64aa032">getAttribute</a> (int index)</td></tr>
-<tr class="memdesc:a3e7059aefb22e29c50059d6ce64aa032"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by index <br /></td></tr>
-<tr class="separator:a3e7059aefb22e29c50059d6ce64aa032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa31e2572f5b9c223467470c585b5f337"><td class="memItemLeft" align="right" valign="top"><a id="aa31e2572f5b9c223467470c585b5f337"></a>
-<a class="el" href="class_x_m_l_attribute_template.html">XMLAttributeTemplate</a>&lt; StringType &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#aa31e2572f5b9c223467470c585b5f337">getAttribute</a> (const std::string_view &amp;name)</td></tr>
-<tr class="memdesc:aa31e2572f5b9c223467470c585b5f337"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by name <br /></td></tr>
-<tr class="separator:aa31e2572f5b9c223467470c585b5f337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d9d5df36b813c13bd67251136ff902f"><td class="memItemLeft" align="right" valign="top"><a id="a5d9d5df36b813c13bd67251136ff902f"></a>
-<a class="el" href="class_x_m_l_attribute_template.html">XMLAttributeTemplate</a>&lt; StringType &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a5d9d5df36b813c13bd67251136ff902f">getAndRemoveAttribute</a> (const std::string_view &amp;name)</td></tr>
-<tr class="memdesc:a5d9d5df36b813c13bd67251136ff902f"><td class="mdescLeft">&#160;</td><td class="mdescRight">return one attribute by name and remove it from list (useful when parsing xml struct and you are sure you will access attribute only once) <br /></td></tr>
-<tr class="separator:a5d9d5df36b813c13bd67251136ff902f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eec3cd65bb455c58f27f797fa2a37f"><td class="memItemLeft" align="right" valign="top"><a id="a96eec3cd65bb455c58f27f797fa2a37f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_x_m_l_node_template.html#a96eec3cd65bb455c58f27f797fa2a37f">addAttribute</a> (<a class="el" href="class_x_m_l_attribute_template.html">XMLAttributeTemplate</a>&lt; StringType &gt; *attribute)</td></tr>
 <tr class="memdesc:a96eec3cd65bb455c58f27f797fa2a37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">add the given attribute to the node <br /></td></tr>
