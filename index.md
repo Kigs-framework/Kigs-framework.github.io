@@ -29,3 +29,5 @@ The main IDE to build current platform is Visual Studio C++ 2019.
 Kigs framework project on [GitHub](https://github.com/Kigs-framework/kigs/)
 
 Please, also visit the [Wiki](https://github.com/Kigs-framework/kigs/wiki) on GitHub.<br/>
+
+<a rel="me" href="https://toot.community/@StephaneCapo">Mastodon</a>
