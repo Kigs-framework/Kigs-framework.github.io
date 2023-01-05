@@ -60,3 +60,9 @@ Sample7 is a data driven graphics application giving an overview of Lua Binding 
 Sample8 is a data driven application without C++ code modification
 
 [Sample8](/samplesHTML5/sample8/index.html)
+
+### Pacman
+
+Fun data driven application using FSM
+
+[Pacman](/samplesHTML5/pacman/index.html)
